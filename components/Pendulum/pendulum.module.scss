@@ -1,0 +1,27 @@
+
+
+.pendulum{
+
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+
+    .inside{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        object-fit: none;
+        object-position: 100% 100%;
+    }
+
+}
