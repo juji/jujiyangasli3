@@ -34,11 +34,24 @@ export default function Pendulum(){
 
     // delay draw start
     useEffect(() => {
-        if(timeout.current) clearTimeout(timeout.current)
-        if(!started) timeout.current = setTimeout(() => {
+
+        // first time, start immediately
+        if(!started && !timeout.current) {
+            
             startTime.current = new Date().valueOf()
             setStarted(startTime.current)
-        },500)
+            timeout.current = setTimeout(() => {},0)
+        
+        // second time and so on
+        }else if(timeout.current){
+            
+            clearTimeout(timeout.current)
+            if(!started) timeout.current = setTimeout(() => {
+                startTime.current = new Date().valueOf()
+                setStarted(startTime.current)
+            },500)
+
+        }
     },[ started ])
 
     return <div className={styles.pendulum} id="pendulum">

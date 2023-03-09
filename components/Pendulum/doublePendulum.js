@@ -13,14 +13,6 @@ const DoublePendulum = function(
     if(!canvas) return null
 
     this.started = started
-  
-    
-    this.bound = {
-      left:0,
-      top:0,
-      right: window.innerWidth,
-      bottom: window.innerHeight
-    };
 
     this.width = window.innerWidth
 
