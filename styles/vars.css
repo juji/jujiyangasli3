@@ -4,5 +4,5 @@
   --text: #f0f0f0;
   --blue: #74b9ff;
   --menuTop: 476px;
-  --menuTopIntersected: calc(100vh - 66px)
+  --menuTopIntersected: calc(100% - 66px)
 }
