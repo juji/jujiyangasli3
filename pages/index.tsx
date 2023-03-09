@@ -53,7 +53,6 @@ export default function Home() {
           <Works />
           <Tech />
           <Contact />
-          <p>asdf asdf</p>
         </div>
       </main>
     </>
