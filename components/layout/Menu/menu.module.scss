@@ -1,0 +1,67 @@
+@use 'components/utils/anim/fadeIn';
+@use 'components/utils/anim/slideIn';
+
+.menu{
+
+    z-index: 3;
+    position:fixed;
+    top: var(--menuTop);
+    left:0;
+    transition: top 1000ms;
+    padding-left: calc( 34px + 21px );
+    transition: top 200ms, padding-left 200ms;
+    transition-timing-function: ease-out, linear;
+    transition-delay: 0ms, 200ms;
+    width: 100%;
+
+    .menuContainer{
+        display:inline-block;
+    }
+
+
+    .menuContainer .grid{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 21px;
+    }
+
+    .grid>div{
+        padding: 21px 0;
+    }
+
+    #menuHome{
+        animation-name: fadeIn;
+        animation-duration: 350ms;
+        animation-delay: 0ms;
+        animation-fill-mode: both;
+    }
+
+    #menuWorks{
+        animation-name: slideIn;
+        animation-duration: 350ms;
+        animation-delay: 200ms;
+        animation-fill-mode: both;
+    }
+
+    #menuTech{
+        animation-name: slideIn;
+        animation-duration: 350ms;
+        animation-delay: 400ms;
+        animation-fill-mode: both;
+    }
+
+    #menuContact{
+        animation-name: slideIn;
+        animation-duration: 350ms;
+        animation-delay: 600ms;
+        animation-fill-mode: both;
+    }
+
+    &.intersected{
+        padding-left: 34px;
+        top: var(--menuTopIntersected);
+        background-color: rgba(0,0,0,0.2);
+    }
+
+
+}

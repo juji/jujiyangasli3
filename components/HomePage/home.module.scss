@@ -1,0 +1,61 @@
+@use 'components/utils/anim/easeOutElastic';
+@use 'components/utils/anim/fadeIn';
+
+.hello{
+    padding: 21px;
+    margin-top: 144px;
+    margin-left: 34px;
+
+    transition: opacity 300ms;
+    transition-timing-function: ease-out;
+    opacity: 1;
+
+    &.intersected{
+        transition: opacity 100ms;
+        opacity: 0;
+    }
+
+    p{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    .hellobig{
+        font-size: 34px;
+        margin-bottom: 13px;
+        margin-top: 21px;
+        font-family: "Source Code Pro", serif;
+        animation-name: fadeIn;
+        animation-duration: 300ms;
+        animation-fill-mode: both;
+    }
+
+    .p1{
+        animation-name: fadeIn;
+        animation-duration: 350ms;
+        animation-delay: 100ms;
+        animation-fill-mode: both;
+    }
+
+    .p2{
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-delay: 200ms;
+        animation-fill-mode: both;
+    }
+
+    .p3{
+        animation-name: fadeIn;
+        animation-duration: 450ms;
+        animation-delay: 300ms;
+        animation-fill-mode: both;
+    }
+
+    .smiley{
+        font-size: 45px;
+        animation-name: easeOutElastic;
+        animation-duration: 1000ms;
+        animation-delay: 1200ms;
+        animation-fill-mode: both;
+    }
+}
