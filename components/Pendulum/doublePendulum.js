@@ -15,6 +15,7 @@ const DoublePendulum = function(
     this.started = started
 
     this.width = window.innerWidth
+    this.height = window.innerHeight
 
     this.callback = callback
     this.canvas = canvas;
@@ -36,7 +37,7 @@ const DoublePendulum = function(
   
     this.center = center || {
       x: (this.width)-55,
-      y: (window.innerHeight)-89
+      y: (this.height)-89
     };
   
     this.acc1 = 0;
@@ -54,7 +55,7 @@ const DoublePendulum = function(
     this.line = []
     this.anim = null
     this.linelength = 200
-    this.linenum = 50000
+    this.linenum = 30000
     this.itt = 0
     this.stop = false;
   
@@ -65,10 +66,10 @@ const DoublePendulum = function(
   DoublePendulum.prototype.init = function(){
   
     this.canvas.width = this.width;
-    this.canvas.height = window.innerHeight;
+    this.canvas.height = this.height;
   
     this.context.fillStyle = '#111';
-    this.context.fillRect(0,0,this.width,window.innerHeight);
+    this.context.fillRect(0,0,this.width,this.height);
     // this.context.shadowBlur = 2;
     // this.context.shadowColor = "#242424";
     this.context.lineWidth = 0.5;
