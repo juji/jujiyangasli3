@@ -23,10 +23,15 @@ export default function Home() {
         threshold: 0.01,
       };
       
+      if(!observer.current)
       observer.current = new IntersectionObserver((entries) => {
-        setIntersected(entries[0].isIntersecting)
+
+        setIntersected(
+          entries[0].isIntersecting
+        )
+
       }, options);
-  
+
       observer.current.observe(
         document.getElementById('content') as Element
       );
@@ -49,11 +54,11 @@ export default function Home() {
       <main className={intersected ? 'intersected' : ''}>
           <Header />
           <Pendulum />
-        <div id='content'>
-          <Works />
-          <Tech />
-          <Contact />
-        </div>
+          <div id="content">
+            <Works />
+            <Tech />
+            <Contact />
+          </div>
       </main>
     </>
   )

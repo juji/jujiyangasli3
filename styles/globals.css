@@ -11,7 +11,7 @@ html,body{
 html{
   scroll-behavior: smooth;
   overflow: auto;
-  scroll-snap-type: y mandatory; 
+  scroll-snap-type: y proximity; 
 }
 
 body{
@@ -52,7 +52,7 @@ a:hover:after {
 .page{
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 
