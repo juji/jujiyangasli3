@@ -4,21 +4,18 @@ import { useRouter } from 'next/router'
 import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
+import isNotHome from '@/components/utils/isNotHome.interface'
 
-export default function Menu(){
+export default function Menu(props: isNotHome){
 
-    const router = useRouter()
-    const [isHome, setisHome] = useState(false)
-    useEffect(() => {
-        setisHome(router.pathname === '/')
-    },[ router.pathname ])
+    const { isNotHome } = props;
 
-    return <div className={`${styled.menu} ${isHome ? '' : styled.intersected}`} id="menu">
+    return <div className={`${styled.menu} ${isNotHome ? styled.intersected : ''}`} id="menu">
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
-                {isHome ? null : <div className="menuItem" id={styled.menuHome}>
+                {isNotHome ? <div className="menuItem" id={styled.menuHome}>
                     <Link href="/"><TiHome /></Link>
-                </div>}
+                </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
                     <Link href="/works">works</Link>
                 </div>

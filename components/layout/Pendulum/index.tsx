@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
+import isNotHome from '@/components/utils/isNotHome.interface'
 
-export default function Pendulum(){
+export default function Pendulum(props: isNotHome){
+
+    const { isNotHome } = props
 
     const [ img, setImage ] = useState<string | null>(null)
     const [ started, setStarted ] = useState<number | null>(null)
@@ -55,6 +58,8 @@ export default function Pendulum(){
     },[ started ])
 
     return <div className={styles.pendulum} id="pendulum">
+
+        <div className={`${styles.bg} ${isNotHome?styles.on:''}`}></div>
         
         <div className={styles.inside}>
             { img ? <img src={img} /> : started ? <canvas ref={r => PendulumFn(
