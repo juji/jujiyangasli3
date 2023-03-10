@@ -7,15 +7,15 @@ export default function Tech(){
     return <div className={`${style.tech} page`} id="tech">
 
         <h1 className={`${style.h1}`}>Technologies</h1>
-        <p className={`${style.par}`}>Techs i'm familiar with</p>
+        <p className={`${style.par}`}>Techs i&apos;m familiar with</p>
 
         { data.map((group, i) => {
 
-            return <div className={style.techRow} id={style[`techRow${i}`]}>
+            return <div key={`techRow${i}`} className={style.techRow} id={style[`techRow${i}`]}>
 
-                {group.map(tech => {
+                {group.map((tech, idx) => {
 
-                    return <a href={tech.url} 
+                    return <a key={`techRow${i}.${idx}`} href={tech.url} 
                         title={tech.title} 
                         target="_blank" rel="noopener noreferrer" 
                         className={style.techItem}>
