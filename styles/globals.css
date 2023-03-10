@@ -56,6 +56,11 @@ a:hover:after {
   scroll-snap-align: start;
 }
 
+h1{
+  margin-top: 21px;
+  font-size: 21px;
+}
+
 /* #header{
   
 }

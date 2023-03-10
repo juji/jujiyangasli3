@@ -8,10 +8,8 @@
     top: var(--menuTop);
     left:0;
     transition: top 1000ms;
-    padding-left: calc( 34px + 21px );
-    transition: top 200ms, padding-left 200ms;
-    transition-timing-function: ease-out, linear;
-    transition-delay: 0ms, 200ms;
+    padding-left: 55px;
+    transition: top 400ms;
     width: 100%;
 
     .menuContainer{
@@ -34,6 +32,7 @@
         animation-duration: 350ms;
         animation-delay: 0ms;
         animation-fill-mode: both;
+        padding-right: 8px;
     }
 
     #menuWorks{
@@ -58,7 +57,6 @@
     }
 
     &.intersected{
-        padding-left: 34px;
         top: var(--menuTopIntersected);
         background-color: rgba(0,0,0,0.2);
     }

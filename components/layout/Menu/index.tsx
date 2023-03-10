@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import styled from './menu.module.scss'
 import Link from 'next/link'
+import { TiHome } from "react-icons/ti"
 
 export default function Menu(){
 
@@ -16,7 +17,7 @@ export default function Menu(){
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isHome ? null : <div className="menuItem" id={styled.menuHome}>
-                    <Link href="/">home</Link>
+                    <Link href="/"><TiHome /></Link>
                 </div>}
                 <div className="menuItem" id={styled.menuWorks}>
                     <Link href="/works">works</Link>

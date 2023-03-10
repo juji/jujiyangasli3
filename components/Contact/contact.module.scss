@@ -1,13 +1,86 @@
-
+@use 'components/utils/anim/fadeIn';
+@use 'components/utils/anim/slideIn';
 
 .contact{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: var(--transparentBg);
+    padding-top: 89px;
+    padding-left: 55px;
 
-    p{
-        text-align: center;
+    .h1{
+
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-fill-mode: both;
+
     }
+
+    .par{
+
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-delay: 100ms;
+        animation-fill-mode: both;
+
+    }
+
+    .email{
+        margin-top: 55px;
+        margin-bottom: 8px;
+        a{ font-size: 21px; }
+
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-delay: 200ms;
+        animation-fill-mode: both;
+    }
+
+    .city{
+        margin-bottom: 34px;
+
+        animation-name: fadeIn;
+        animation-duration: 500ms;
+        animation-delay: 300ms;
+        animation-fill-mode: both;
+    }
+
+    .links{
+        a{
+            margin-right: 21px;
+        }
+
+        a:hover:after {
+            transform: scaleX(0);
+          }
+
+        #github svg{
+            animation-name: slideIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
+            animation-delay: 300ms;
+            
+        }
+
+        #npm svg{
+            animation-name: slideIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
+            animation-delay: 400ms;
+        }
+
+        #linkedin svg{
+            animation-name: slideIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
+            animation-delay: 500ms;
+        }
+
+        #skype svg{
+            animation-name: slideIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
+            animation-delay: 600ms;
+        }
+    }
+    
 }
