@@ -36,16 +36,26 @@
 
         .techItem{
             width: 100%;
-            height: 89px;
-            
-            // margin-right: 21px;
+            height: 89px;   
             margin-bottom: 21px;
+
+            &>div{
+                transition: all 200ms;
+            }
 
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
             }
+        }
+
+        .techItem:hover>div{
+            transform: scale3d(1.1,1.1,1);
+        }
+
+        .techItem:active>div{
+            transform: scale3d(0.9,0.9,1);
         }
 
         #nodejs{
@@ -227,7 +237,7 @@
             }
     
             #mysql{
-                width: 74px;
+                width: 87px;
             }
 
             #redis{
