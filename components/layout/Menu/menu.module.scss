@@ -7,9 +7,9 @@
     position:fixed;
     top: var(--menuTop);
     left:0;
-    transition: top 1000ms;
     padding-left: 55px;
-    transition: top 400ms;
+    transition: top 400ms, background-color 200ms;
+    transition-delay: 0s, 700ms;
     width: 100%;
 
     .menuContainer{
