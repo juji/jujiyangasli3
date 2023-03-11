@@ -9,7 +9,7 @@
     left:0;
     padding-left: 55px;
     transition: top 400ms, background-color 200ms;
-    transition-delay: 0s, 700ms;
+    transition-delay: 0s, 0ms;
     width: 100%;
 
     .menuContainer{
@@ -58,6 +58,7 @@
 
     &.intersected{
         top: var(--menuTopIntersected);
+        transition-delay: 0s, 700ms;
         background-color: rgba(0,0,0,0.9);
     }
 
