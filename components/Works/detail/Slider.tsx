@@ -33,6 +33,7 @@ export default function Slider({ slides }: SlideImages) {
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map(v => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
                 <img src={v.url} alt={v.title} />
+                <a href={v.url} target="_blank" rel="noopener noreferrer"></a>
             </div>)}
         </div>
         {loaded && instanceRef.current && slides.length > 1 && (
