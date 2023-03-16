@@ -1,0 +1,196 @@
+@keyframes slideInFromTop {
+    0%{
+        opacity: 0;
+        transform: translate(0%, -100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0%{
+        opacity: 0;
+        transform: translate(-100%, 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes slideInFromRight {
+    0%{
+        opacity: 0;
+        transform: translate(100%, 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+.workDetail{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+
+
+    .image{
+        background-color: #222;
+        flex: 0 0 auto;
+
+        animation-name: slideInFromTop;
+        animation-duration: 400ms;
+        animation-fill-mode: both;
+
+        &>div{
+            padding-top: 56.25%;
+            position: relative;
+
+            &>*{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .text{
+
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        animation-name: slideInFromBottom;
+        animation-duration: 400ms;
+        animation-fill-mode: both;
+
+        .topbar{
+
+            padding: 21px 55px;
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+
+            h1{
+                margin: 0;
+                flex: 1 1 auto;
+            }
+
+            button{
+                flex: 0 0 auto;
+                margin-right: 21px;
+                background-color: transparent;
+                border: 0;
+                color: white;
+                cursor: pointer;
+            }
+
+            button:hover{
+                transform: scale(1.3);
+            }
+
+            a{
+                font-size: 21px;
+                transition: all 100ms;
+                color: red;
+                flex: 0 0 auto;
+            }
+
+            a:hover{
+                transform: scale(1.3);
+                &:after {
+                    transform: scaleX(0);
+                }
+            }
+
+
+            a:active{
+                transform: scale(1.1);
+            }
+
+        }
+
+        .content{
+
+            background-color: #111;
+            flex: 1 1 auto;
+            position: relative;
+            overflow: hidden;
+            height: 0px;
+            
+            .contentChild{
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                padding: 55px;
+                overflow-y: auto;
+                line-height: 1.63em;
+
+                .projectLink{
+                    margin-bottom: 34px;
+                }
+    
+                p{
+                    margin-bottom: 1rem;
+                }
+            }
+
+        }
+
+
+    }
+
+    @media screen and (min-width:913px) {
+
+        flex-direction: row;
+
+        .image{
+            animation-name: slideInFromLeft;
+            flex: 1 1 auto;
+
+            &>div{
+                padding-top: 0%;
+                height: 100%;
+            }
+        }
+
+        .text{
+            animation-name: slideInFromRight;
+            flex: 0 0 auto;
+            width: 432px;
+        }
+
+    }
+
+    @media screen and (min-width:1500px) {
+        .text{
+            width: 600px;
+        }
+    }
+}

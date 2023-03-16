@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import style from './workTile.module.scss'
 import Loader from '@/components/utils/Loader'
+import Link from 'next/link'
 
 interface WorkImage {
     url: string
@@ -27,7 +28,7 @@ export default function WorkTile(props: WorkTileInterface){
 
     return <div id={id} className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
         <img src={images[0].url} alt={title} loading="lazy" onLoad={onLoad} />
-        <a href={`/works/${workId}`} className={style.workTitle}>{title}</a>
+        <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         <Loader className={style.loader} />
     </div>
 }
