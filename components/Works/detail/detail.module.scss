@@ -118,10 +118,11 @@
             }
 
             a{
-                font-size: 21px;
+                font-size: 30px;
                 transition: all 100ms;
                 color: red;
                 flex: 0 0 auto;
+                line-height: 1em;
             }
 
             a:hover{
