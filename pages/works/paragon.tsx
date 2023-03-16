@@ -7,7 +7,7 @@ export default function Paragon(){
         <div>
             <p>The First website of my creation, that i like. Developed with PHP, MySql.</p>
             <p>Using CPanel as a server management tool.</p>
-            <p>It was 2012, i guess... I don't remember.</p>
+            <p>It was 2012, i guess... I don&lsquo;t remember.</p>
             <p>
                 I had a great time creating this site. The client was great: <a target="_blank" rel="noopener noreferrer" href="https://www.tauziahotels.com/">https://www.tauziahotels.com/</a>.
                 The designer was awesome: <a href="http://visious.co/" rel="noopener noreferrer" target="_blank">http://visious.co/</a>.

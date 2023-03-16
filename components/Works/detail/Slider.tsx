@@ -31,7 +31,7 @@ export default function Slider({ slides }: SlideImages) {
     <div className={style.slider}>
       <div className={style.navigationWrapper}>
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
-            {slides.map(v => <div className={`keen-slider__slide ${style.slide}`}>
+            {slides.map(v => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
                 <img src={v.url} alt={v.title} />
             </div>)}
         </div>
