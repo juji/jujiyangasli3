@@ -21,8 +21,8 @@
         a{
             position: absolute;
             top:0;
-            left:0;
-            width: 100%;
+            left:50px;
+            width: calc(100% - 100px);
             height: 100%;
         }
     }
