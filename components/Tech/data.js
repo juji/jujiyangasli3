@@ -83,7 +83,7 @@ const tech = [
     //   url: 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets'
     // }
   ],
-  [
+  [ 
     {
       id: 'mongo',
       title: 'Mongo DB',

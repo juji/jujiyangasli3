@@ -46,7 +46,20 @@ a:hover:after {
 .page{
   position: relative;
   z-index: 1;
-  /* min-height: 100vh; */
+  
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 144px;
+}
+
+.page.error h1{
+  font-size: 55px;
+  margin-top: 55px;
+}
+
+.page.error p{
+  font-size: 34px;
+  color: #910f0f;
 }
 
 h1{

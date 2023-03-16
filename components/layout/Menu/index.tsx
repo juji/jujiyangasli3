@@ -1,6 +1,5 @@
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
+
 import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
@@ -10,7 +9,7 @@ export default function Menu(props: isNotHome){
 
     const { isNotHome } = props;
 
-    return <div className={`${styled.menu} ${isNotHome ? styled.intersected : ''}`} id="menu">
+    return <nav className={`${styled.menu} ${isNotHome ? styled.intersected : ''}`} id="menu">
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isNotHome ? <div className="menuItem" id={styled.menuHome}>
@@ -27,6 +26,6 @@ export default function Menu(props: isNotHome){
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
 }

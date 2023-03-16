@@ -3,10 +3,6 @@
 
 .tech{
 
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-bottom: 144px;
-
     h1{
         animation-name: fadeIn;
         animation-duration: 400ms;
@@ -21,32 +17,35 @@
         animation-fill-mode: both;
     }
 
-    @for $i from 0 through 10 {
-        .techNo#{$i} {
-            animation-name: slideIn;
-            animation-duration: 400ms;
-            animation-fill-mode: both;
-            animation-delay: (1000ms + (200ms * $i));
-        }
-    }
 
     .techRow{
-        margin-bottom: 34px;
+        margin-bottom: 55px;
 
 
         .techItem{
             width: 100%;
             height: 89px;   
             margin-bottom: 21px;
+            animation-name: slideIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
 
             &>div{
-                transition: all 200ms;
+                transition: all 500ms;
+                overflow: hidden;
             }
 
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+            }
+        }
+
+
+        @for $i from 0 through 10 {
+            .techNo#{$i} {
+                animation-delay: (500ms + (200ms * $i));
             }
         }
 

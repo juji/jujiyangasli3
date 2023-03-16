@@ -1,12 +1,49 @@
-
+@use 'components/utils/anim/fadeIn';
 
 .works{
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    h1{
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-fill-mode: both;
+    }
 
-    p{
-        text-align: center;
+    .par{
+        margin-bottom: 55px;
+        animation-name: fadeIn;
+        animation-duration: 400ms;
+        animation-delay: 100ms;
+        animation-fill-mode: both;
+    }
+
+    .workGrid{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 21px;
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width:1025px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .workTile{
+
+            animation-name: fadeIn;
+            animation-duration: 400ms;
+            animation-fill-mode: both;
+
+        }
+
+        @for $i from 0 through 6 {
+            .workTile#{$i} {
+                animation-delay: (200ms + (50ms * $i));
+            }
+        }
+
+
     }
 }
