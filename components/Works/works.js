@@ -63,7 +63,7 @@ module.exports = [
     id: 'methodicate',
     year: '2018',
     title:'Methodicate',
-    url: 'https://www.methodicate.com/',
+    url: 'https://twitter.com/methodicate',
     images: [
       {
         url: 'https://drive.google.com/uc?id=1DiUsi-k1iyDWkYP6XoSRYaUr7r8pHjvg',
