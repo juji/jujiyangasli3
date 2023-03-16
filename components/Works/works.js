@@ -31,7 +31,7 @@ module.exports = [
     id: 'clubrow',
     year: '2019',
     title:'Clubrow',
-    url: 'https://www.clubrowfitness.com/',
+    url: 'https://www.instagram.com/club.row/',
     images: [
       {
         url: 'https://drive.google.com/uc?id=1pZVi6zv7fzBGl_IqGBcdyPkhwPcSGn1N',
@@ -43,7 +43,7 @@ module.exports = [
     id: 'amber',
     title:'Amber Video',
     year: '2018',
-    url: 'https://app.ambervideo.co/',
+    url: 'https://www.linkedin.com/company/ambervideo',
     images: [
       {
         url: 'https://drive.google.com/uc?id=1VMmqjXFJ9MwTz_J3MwDPLBpW_iNy4Aa3',
