@@ -95,7 +95,7 @@ module.exports = [
     id: 'paragon',
     year: '2012 est.',
     title:'Solo Paragon Hotel',
-    url: 'http://soloparagonhotel.com',
+    url: 'https://soloparagonhotel.com',
     images: [
       {
         url: 'https://drive.google.com/uc?id=1LtFpi9ihzb_VJ_-RW1yZDPO6J-RnxFRM',
