@@ -65,7 +65,25 @@
 
         a.workTitle{
             opacity: 1;
-            border: 3em solid rgba(0,0,0,0.2);
+            border: 2em solid rgba(0,0,0,0.2);
+        }
+
+        @media screen and (min-width:500px) {
+            a.workTitle{
+                border: 4em solid rgba(0,0,0,0.2);
+            }
+        }
+
+        @media screen and (min-width:1025px) {
+            a.workTitle{
+                border: 3em solid rgba(0,0,0,0.2);
+            }
+        }
+
+        @media screen and (min-width:1500px) {
+            a.workTitle{
+                border: 5em solid rgba(0,0,0,0.2);
+            }
         }
     }
 }
