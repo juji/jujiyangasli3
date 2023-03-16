@@ -10,6 +10,7 @@ interface WorkImage {
 
 interface WorkTileInterface {
    id: string
+   year: string
    workId: string
    images: WorkImage[]
    title: string
@@ -19,7 +20,7 @@ interface WorkTileInterface {
 
 export default function WorkTile(props: WorkTileInterface){
 
-    const { id, workId, images, title, url, className } = props
+    const { id, workId, images, title, className } = props
     
     const [ loaded, setLoaded ] = useState(false)
     const onLoad = () => {

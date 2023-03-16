@@ -18,13 +18,13 @@ export default function WorkDetail({ children }: WorkDetailProps){
     )
     
     const [ min, setMin ] = useState(false)
-    const minimize = () => {
-        setMin(true)
-    }
+    // const minimize = () => {
+    //     setMin(true)
+    // }
 
-    const maximize = () => {
-        setMin(false)
-    }
+    // const maximize = () => {
+    //     setMin(false)
+    // }
 
 
     return project ? <div className={`${styles.workDetail} page ${min ? styles.min :''}`}>
@@ -37,10 +37,10 @@ export default function WorkDetail({ children }: WorkDetailProps){
 
             <div className={styles.topbar}>
                 <h1>{project.title}</h1>
-                { min ? 
+                {/* { min ? 
                     <button onClick={maximize}>&#9744;</button> : 
                     <button onClick={minimize}>&#8213;</button>
-                }
+                } */}
                 
                 <Link href="/works">&times;</Link>
             </div>
@@ -49,6 +49,9 @@ export default function WorkDetail({ children }: WorkDetailProps){
                 <div className={styles.contentChild}>
                     <div className={styles.projectLink}>
                         <a target="_blank" rel="noopener noreferrer" href={project.url}>{project.url}</a>
+                    </div>
+                    <div className={styles.projectYear}>
+                        Year: {project.year}
                     </div>
                     {children}
                 </div>

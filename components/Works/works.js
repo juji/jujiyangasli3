@@ -2,6 +2,7 @@ module.exports = [
   {
     id: 'wheeleasy',
     title:'WheelEasy',
+    year: '2019 - 2023',
     url: 'https://wheeleasy.org',
     images: [
       {
@@ -28,6 +29,7 @@ module.exports = [
   },
   {
     id: 'clubrow',
+    year: '2019',
     title:'Clubrow',
     url: 'https://www.clubrowfitness.com/',
     images: [
@@ -40,6 +42,7 @@ module.exports = [
   {
     id: 'amber',
     title:'Amber Video',
+    year: '2018',
     url: 'https://app.ambervideo.co/',
     images: [
       {
@@ -58,6 +61,7 @@ module.exports = [
   },
   {
     id: 'methodicate',
+    year: '2018',
     title:'Methodicate',
     url: 'https://www.methodicate.com/',
     images: [
@@ -69,6 +73,7 @@ module.exports = [
   },
   {
     id: 'bridestory',
+    year: '2015 - 2016',
     title:'Bridestory - Career',
     url: 'https://careers.bridestory.com',
     images: [
@@ -88,6 +93,7 @@ module.exports = [
   },
   {
     id: 'paragon',
+    year: '2012 est.',
     title:'Solo Paragon Hotel',
     url: 'http://soloparagonhotel.com',
     images: [
