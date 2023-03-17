@@ -18,12 +18,14 @@
             transform: translateX(50px);
         }
 
-        a{
+        button{
             position: absolute;
             top:0;
             left:50px;
             width: calc(100% - 100px);
             height: 100%;
+            background-color: transparent;
+            border: 0;
         }
     }
 

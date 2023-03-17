@@ -9,11 +9,12 @@ interface Slide{
 }
 
 interface SlideImages{
-    slides: Slide[]
+    slides: Slide[],
+    openZoomer: (obj: { src: string, alt: string }) => () => void
 }
 
 
-export default function Slider({ slides }: SlideImages) {
+export default function Slider({ slides, openZoomer }: SlideImages) {
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -33,7 +34,7 @@ export default function Slider({ slides }: SlideImages) {
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map(v => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
                 <img src={v.url} alt={v.title} />
-                <a href={v.url} target="_blank" rel="noopener noreferrer"></a>
+                <button onClick={openZoomer({ src: v.url, alt: v.title })}></button>
             </div>)}
         </div>
         {loaded && instanceRef.current && slides.length > 1 && (

@@ -4,6 +4,7 @@ import data from '../works'
 import styles from './detail.module.scss'
 import Link from 'next/link'
 import Slider from './Slider'
+import Zoomer from './Zoomer'
 
 interface WorkDetailProps{
     children: ReactNode
@@ -16,32 +17,22 @@ export default function WorkDetail({ children }: WorkDetailProps){
     const [ project ] = useState(
         data.find(v => v.id === workName.current)
     )
-    
-    const [ min, setMin ] = useState(false)
-    // const minimize = () => {
-    //     setMin(true)
-    // }
 
-    // const maximize = () => {
-    //     setMin(false)
-    // }
+    const [ zoomer, setZoomer ] = useState<{ src: string, alt: string } | null>(null)
+    const openZoomer = (obj: { src: string, alt: string }) => () => setZoomer(obj)
+    const closeZoomer = () => setZoomer(null)
 
 
-    return project ? <div className={`${styles.workDetail} page ${min ? styles.min :''}`}>
+    return project ? <div className={`${styles.workDetail} page`}>
         <div className={styles.image}>
             <div>
-                <Slider slides={project.images}/>
+                <Slider slides={project.images} openZoomer={openZoomer} />
             </div>
         </div>
         <div className={styles.text}>
 
             <div className={styles.topbar}>
                 <h1>{project.title}</h1>
-                {/* { min ? 
-                    <button onClick={maximize}>&#9744;</button> : 
-                    <button onClick={minimize}>&#8213;</button>
-                } */}
-                
                 <Link href="/works">&times;</Link>
             </div>
 
@@ -59,6 +50,11 @@ export default function WorkDetail({ children }: WorkDetailProps){
             </div>
 
         </div>
+        
+        { zoomer ? <Zoomer 
+            {...zoomer}
+            onClose={closeZoomer} /> : null}
+        
     </div> : null
 
 
