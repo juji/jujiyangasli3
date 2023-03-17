@@ -101,6 +101,10 @@ blockquote::before{
   z-index: -1;
 }
 
+.offline img{
+  max-width: 100%;
+}
+
 /* #header{
   
 }
