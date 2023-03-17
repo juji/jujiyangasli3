@@ -1903,6 +1903,11 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-zoom-pan-pinch@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.0.2.tgz#706c67e875e9a30480cdbef8dd4e3d6fdac9921c"
+  integrity sha512-c8BxPl/zK6RiOYrV/xBQ+ebgZpsMvbz6WOoqv2P/1QWxGCk1+q3xWF+5ub4QYasv4W8+J6vSelOR8H0WCEbL4w==
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"

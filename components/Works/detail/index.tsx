@@ -48,7 +48,8 @@ export default function WorkDetail({ children }: WorkDetailProps){
             <div className={styles.content}>
                 <div className={styles.contentChild}>
                     <div className={styles.projectLink}>
-                        <a target="_blank" rel="noopener noreferrer" href={project.url}>{project.url}</a>
+                        <a target="_blank" rel="noopener noreferrer" href={project.url}>
+                            {project.url.replace('https://','').replace('www.','')}</a>
                     </div>
                     <div className={styles.projectYear}>
                         Year: {project.year}
