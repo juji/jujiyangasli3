@@ -82,6 +82,25 @@ h1{
   font-size: 21px;
 }
 
+blockquote{
+  background-color: #191919;
+  padding: 21px 34px;
+  position:relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+blockquote::before{
+  font-family:'Times New Roman', Times, serif;
+  content: '”';
+  position: absolute;
+  top: 34px;
+  left: 0px;
+  font-size: 144px;
+  color: #333;
+  z-index: -1;
+}
+
 /* #header{
   
 }
