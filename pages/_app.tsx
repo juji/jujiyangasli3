@@ -23,12 +23,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return <>
     <HtmlHead />
     <Script id="sw-register" strategy="afterInteractive">
-        {`
-            if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js')
-            }
-        `}
-        </Script>
+    {`
+        if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('sw.js')
+        }
+    `}
+    </Script>
     <Header isNotHome={isNotHome} />
     <Pendulum isNotHome={isNotHome} />
     <Menu isNotHome={isNotHome} />

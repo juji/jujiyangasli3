@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 
 export default function HtmlHeader(){
     return <Head>
@@ -10,12 +9,5 @@ export default function HtmlHeader(){
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000"></meta>
         <link rel="manifest" href="manifest.json" />
-        <Script id="show-banner" strategy="afterInteractive">
-        {`
-            if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js')
-            }
-        `}
-        </Script>
     </Head>
 }
