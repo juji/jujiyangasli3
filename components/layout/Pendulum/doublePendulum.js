@@ -3,6 +3,7 @@
 const DoublePendulum = function(
     canvas,
     callback,
+    maxWidth,
     started,
     {
       m1,l1,a1,m2,l2,a2,
@@ -14,7 +15,8 @@ const DoublePendulum = function(
 
     this.started = started
 
-    this.width = window.innerWidth
+
+    this.width = maxWidth ? Math.min(window.innerWidth, maxWidth) : window.innerWidth
     this.height = window.innerHeight
 
     this.callback = callback
@@ -143,13 +145,14 @@ const DoublePendulum = function(
     this.stop = true
   }
   
-  const Pendulum = function( canvas, started, callback ){
+  const Pendulum = function( canvas, started, maxWidth, callback ){
     if(typeof window === 'undefined') return;
     if(typeof requestAnimationFrame === 'undefined') return;
   
     return new DoublePendulum(
       canvas,
       callback,
+      maxWidth,
       started,
       {}
     );

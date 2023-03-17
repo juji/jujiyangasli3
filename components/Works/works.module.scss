@@ -11,6 +11,8 @@
 
 .works{
 
+    max-width: var(--maxWidth);
+
     h1{
         animation-name: fadeIn;
         animation-duration: 400ms;

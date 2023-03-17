@@ -62,9 +62,10 @@ export default function Pendulum(props: isNotHome){
         <div className={`${styles.bg} ${isNotHome?styles.on:''}`}></div>
         
         <div className={styles.inside}>
-            { img ? <img src={img} /> : started ? <canvas ref={r => PendulumFn(
-                r, 
-                started, 
+            { img ? <img src={img} /> : started ? <canvas ref={canvasRef => PendulumFn(
+                canvasRef, 
+                started,
+                0, //maxWidth,
                 (uri: string, ts: number) => {
                     if(ts === startTime.current) setImage(uri)
                 })}></canvas> : null }
