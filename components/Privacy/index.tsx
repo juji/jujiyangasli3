@@ -1,4 +1,4 @@
-import style from &lsquo;./privacy.module.scss&lsquo;
+import style from './privacy.module.scss'
 
 export default function PrivacyPolicy(){
 
