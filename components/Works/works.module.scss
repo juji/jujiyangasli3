@@ -1,4 +1,13 @@
-@use 'components/utils/anim/fadeIn';
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translate(0, 34px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
 
 .works{
 
@@ -40,7 +49,7 @@
 
         @for $i from 0 through 6 {
             .workTile#{$i} {
-                animation-delay: (200ms + (50ms * $i));
+                animation-delay: (500ms + (50ms * $i));
             }
         }
 
