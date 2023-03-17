@@ -17,7 +17,7 @@ export default function Paragon(){
             </p>
             <p>
                 We rewrite the site from scratch, added loads of stuff, and 4 years passed while we do this. Now, 
-                it's alive with users and volunteers, <i>viola</i>!!
+                it&lsquo;s alive with users and volunteers, <i>viola</i>!!
             </p>
             <br />
             <p>Technologies&nbsp;used:{' '}
