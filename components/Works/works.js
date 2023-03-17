@@ -6,20 +6,20 @@ module.exports = [
     url: 'https://wheeleasy.org',
     images: [
       {
-        url: 'https://drive.google.com/uc?id=1NvLuwZJFvSNrchQJLKAh4OaNMPbGxngp',
+        url: 'https://drive.google.com/uc?id=1iLoZm9h6hVEC5DymF8ts-pclQCxcx_nJ',
         title: 'Homepage'
       },
       {
-        url: 'https://drive.google.com/uc?id=1btvSsf_T3YBU4sJNWulEZgYD_-kHhrHx',
+        url: 'https://drive.google.com/uc?id=13ZfFIt6UpTeN5aDhWUW1GRYUqH_50wre',
         title: 'Search'
       },
       {
-        url: 'https://drive.google.com/uc?id=12-p8V_jCFypThxrA__yxX1R8ghqvC4FS',
-        title: 'Place Page'
+        url: 'https://drive.google.com/uc?id=1tZJu7z-ZNSkTuTA2QdFeIRBYdIb3Hqej',
+        title: 'Hotspot'
       },
       {
-        url: 'https://drive.google.com/uc?id=1dzQAa05ki9UNhxUGSLtJnEkkO97Rq2jR',
-        title: 'Hotspot'
+        url: 'https://drive.google.com/uc?id=1n3fVT7WrcsNCU1RLX4SUIHV_U9wZSo5O',
+        title: 'Place Page'
       },
       {
         url: 'https://drive.google.com/uc?id=10K6KUe809sR5_2Xh9hQ0ZQn_UDG6N3MS',
