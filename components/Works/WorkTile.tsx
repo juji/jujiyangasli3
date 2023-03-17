@@ -27,7 +27,16 @@ export default function WorkTile(props: WorkTileInterface){
         setLoaded(true)
     }
 
-    return <div id={id} className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
+    const preventContextMenu = (e: any) => {
+        e.preventDefault && e.preventDefault();
+        e.stopPropagation && e.stopPropagation(); // not necessary in my case, could leave in case stopImmediateProp isn't available? 
+        e.stopImmediatePropagation && e.stopImmediatePropagation();
+        return false;
+    }
+
+    return <div id={id} 
+        onContextMenu={preventContextMenu}
+        className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
         <img src={images[0].url} alt={title} loading="lazy" onLoad={onLoad} />
         <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         <Loader className={style.loader} />
