@@ -10,13 +10,13 @@ export default function Paragon(){
             </blockquote>
             <br />
             <p>Great times..!!</p>
-            <p>I meet <a 
+            <p>I met <a 
                 href="https://www.maxburt.com/" target="_blank"
                     rel="noopener norefferer">Max Burt</a> online, and
                     he needed someone to continue developing WheelEasy with him.
             </p>
             <p>
-                We rewrite the site from scratch, added loads of stuff, and 4 years passed while we do this. Now, 
+                We rewrote the site from scratch, added loads of stuff, and 4 years passed while we do this. Now, 
                 it&lsquo;s alive with users and volunteers, <i>viola</i>!!
             </p>
             <br />
