@@ -33,6 +33,10 @@
         padding: 21px 0;
     }
 
+    a.active:after{
+        transform: scaleX(1) !important;
+    }
+
     #menuHome{
         animation-name: fadeIn;
         animation-duration: 350ms;
