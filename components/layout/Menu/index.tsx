@@ -7,9 +7,9 @@ import isNotHome from '@/components/utils/isNotHome.interface'
 
 export default function Menu(props: isNotHome){
 
-    const { isNotHome } = props;
+    const { isNotHome, bottomPlacement } = props;
 
-    return <nav className={`${styled.menu} ${isNotHome ? styled.intersected : ''}`} id="menu">
+    return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isNotHome ? <div className="menuItem" id={styled.menuHome}>

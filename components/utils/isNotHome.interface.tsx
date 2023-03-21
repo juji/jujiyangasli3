@@ -1,4 +1,5 @@
 
 export default interface isNotHome {
-    isNotHome: Boolean
+    isNotHome: Boolean;
+    bottomPlacement?: Boolean
 }

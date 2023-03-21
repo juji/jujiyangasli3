@@ -8,9 +8,15 @@
     top: var(--menuTop);
     left:0;
     padding-left: 55px;
-    transition: top 400ms, background-color 200ms;
-    transition-delay: 800ms, 0ms;
     width: 100%;
+
+    &.bottomPlacement{
+        top: auto;
+        left:0;
+        bottom: -100px;
+        transition: bottom 200ms;
+        background-color: rgba(0,0,0,0.9);
+    }
 
     .menuContainer{
         display:inline-block;
@@ -30,7 +36,7 @@
     #menuHome{
         animation-name: fadeIn;
         animation-duration: 350ms;
-        animation-delay: 0ms;
+        animation-delay: 400ms;
         animation-fill-mode: both;
         padding-right: 8px;
     }
@@ -56,10 +62,12 @@
         animation-fill-mode: both;
     }
 
-    &.intersected{
-        top: var(--menuTopIntersected);
-        transition-delay: 0ms, 700ms;
-        background-color: rgba(0,0,0,0.9);
+    &.isNotHome.bottomPlacement{
+        bottom: 0;
+    }
+
+    &.isNotHome.normalPlacement{
+        display:none
     }
 
 

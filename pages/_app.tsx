@@ -32,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Header isNotHome={isNotHome} />
     <Pendulum isNotHome={isNotHome} />
     <Menu isNotHome={isNotHome} />
+    <Menu isNotHome={isNotHome} bottomPlacement={true} />
     <main>
       <div id="content">
         <Component {...pageProps} />
