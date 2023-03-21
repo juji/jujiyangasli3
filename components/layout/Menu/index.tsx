@@ -12,10 +12,10 @@ export default function Menu(props: isNotHome){
     const [ page, setPage  ] = useState<string | null>(null)
 
     useEffect(() => {
-        typeof window !== 'undefined' && 
-        document?.location?.pathname && 
+        typeof document !== 'undefined' && 
+        document.location?.pathname && 
         setPage(document.location.pathname);
-    },[ typeof window && document?.location?.pathname ])
+    },[ typeof document !== 'undefined' && document.location?.pathname ])
         
     return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
