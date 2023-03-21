@@ -51,7 +51,7 @@
 
         @for $i from 0 through 6 {
             .workTile#{$i} {
-                animation-delay: (500ms + (50ms * $i));
+                animation-delay: (800ms + (100ms * $i));
             }
         }
 

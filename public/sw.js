@@ -7,6 +7,11 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackAssets = "offline";
 
+if (workbox){
+  console.log('workbox is LOADED')
+  workbox.setConfig({debug: false});
+}
+
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
