@@ -23,12 +23,16 @@ export default function Contact(){
 
         <div className={`${style.links}`}>
             <a target="_blank" rel="noopener noreferrer" 
+                aria-label="Go to juji's github page"
                 id={`${style.github}`} href="https://github.com/juji"><IoLogoGithub size="2.618em" /></a>
             <a target="_blank" rel="noopener noreferrer" 
+                aria-label="Go to juji's npm page"
                 id={`${style.npm}`} href="https://npmjs.com/~jujiyangasli"><IoLogoNpm size="2.618em" /></a>
             <a target="_blank" rel="noopener noreferrer" 
+                aria-label="Go to juji's linkedin page"
                 id={`${style.linkedin}`} href="https://www.linkedin.com/in/jujiyangasli/"><IoLogoLinkedin size="2.618em" /></a>
             <a target="_blank" rel="noopener noreferrer" 
+                aria-label="chat with juji on skype"
                 id={`${style.skype}`} href="skype://juji.gunadi?chat"><IoLogoSkype size="2.618em" /></a>
         </div>
     </div>
