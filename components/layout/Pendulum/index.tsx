@@ -17,17 +17,13 @@ export default function Pendulum(props: isNotHome){
     const [ started, setStarted ] = useState<number | null>(null)
     const timeout = useRef<ReturnType<typeof setTimeout> | null>()
     const startTime = useRef<number | null>()
-    const innerW = useRef<number>(0)
 
     // handle resize event
     useEffect(() => {
 
         if(typeof window === 'undefined') return () => {};
 
-        // innerW.current = window.innerWidth
-
         const handleResize = () => {
-            // if(window.innerWidth === innerW.current) return;
             setImage(null)
             setStarted(null)
         }
