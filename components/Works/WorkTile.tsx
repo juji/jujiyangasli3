@@ -15,14 +15,15 @@ interface WorkTileInterface {
    images: WorkImage[]
    title: string
    url: string,
-   className: string
+   className: string,
+   lazyLoad?: boolean
 }
 
 export default function WorkTile(props: WorkTileInterface){
 
-    const { id, workId, images, title, className } = props
+    const { id, workId, images, title, className, lazyLoad } = props
     
-    const [ loaded, setLoaded ] = useState(false)
+    const [ loaded, setLoaded ] = useState(lazyLoad ? false : true)
     const onLoad = () => {
         setLoaded(true)
     }
@@ -38,8 +39,7 @@ export default function WorkTile(props: WorkTileInterface){
         onContextMenu={preventContextMenu}
         className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
         <img src={images[0].url} alt={title} 
-        // loading="lazy" 
-        onLoad={onLoad} />
+        {...(lazyLoad ? {loading:'lazy', onLoad:onLoad }:{})} />
         <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         <Loader className={style.loader} />
     </div>
