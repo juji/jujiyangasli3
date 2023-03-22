@@ -18,7 +18,7 @@ export default function Works(){
                 {...v}
                 id={style[v.id]}
                 workId={v.id}
-                lazyLoad={i>=3}
+                // lazyLoad={i>=3}
             />)}
         </div>
     </div>
