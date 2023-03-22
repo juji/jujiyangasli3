@@ -4,18 +4,18 @@ import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
 import isNotHome from '@/components/utils/isNotHome.interface'
+import { useRouter } from 'next/router'
 
 export default function Menu(props: isNotHome){
 
     const { isNotHome, bottomPlacement } = props;
+    const router = useRouter()
 
     const [ page, setPage  ] = useState<string | null>(null)
 
     useEffect(() => {
-        typeof document !== 'undefined' && 
-        document.location?.pathname && 
-        setPage(document.location.pathname);
-    },[ typeof document !== 'undefined' && document.location?.pathname ])
+        setPage(router.pathname);
+    },[ router.pathname ])
         
     return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
