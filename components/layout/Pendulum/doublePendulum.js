@@ -137,7 +137,11 @@ const DoublePendulum = function(
       this.anim = requestAnimationFrame(() => this.draw());
     else {
       cancelAnimationFrame(this.anim);
-      this.callback && this.callback(this.canvas.toDataURL(), this.started);
+      this.callback && this.callback({
+        src: this.canvas.toDataURL(),
+        width: this.width,
+        height: this.height
+      }, this.started);
     }
   }
   
