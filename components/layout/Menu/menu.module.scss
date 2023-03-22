@@ -3,14 +3,17 @@
 
 .menu{
 
-    z-index: 3;
-    position:fixed;
-    top: var(--menuTop);
-    left:0;
-    padding-left: 55px;
     width: 100%;
 
+    &.normalPlacement{
+       margin-top: 34px; 
+       margin-bottom: 34px; 
+    }
+    
     &.bottomPlacement{
+        padding-left: 55px;
+        z-index: 3;
+        position:fixed;
         top: auto;
         left:0;
         bottom: -100px;

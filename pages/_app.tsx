@@ -31,7 +31,6 @@ export default function App({ Component, pageProps }: AppProps) {
     </Script>
     <Header isNotHome={isNotHome} />
     <Pendulum isNotHome={isNotHome} />
-    <Menu isNotHome={isNotHome} />
     <Menu isNotHome={isNotHome} bottomPlacement={true} />
     <main>
       <div id="content">

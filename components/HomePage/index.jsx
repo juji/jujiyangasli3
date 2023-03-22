@@ -1,4 +1,5 @@
 import styles from './home.module.scss'
+import Menu from '@/components/layout/Menu'
 
 export default function Home(){
 
@@ -12,6 +13,7 @@ export default function Home(){
         <h2 className={styles.p3}>I am a web developer.</h2>
         <br />
         <div id="smiley" className={styles.smiley}>;)</div>
+        <Menu isNotHome={false} />
     </div>
 
 }
