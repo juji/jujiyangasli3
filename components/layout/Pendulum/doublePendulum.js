@@ -57,7 +57,7 @@ const DoublePendulum = function(
     this.line = []
     this.anim = null
     this.linelength = 200
-    this.linenum = 30000
+    this.linenum = 20000
     this.itt = 0
     this.stop = false;
   
