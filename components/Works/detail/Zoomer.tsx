@@ -42,9 +42,7 @@ export default function Zoomer({ src, alt, onClose }: ZoomerProps){
     const [ closing, setClosing ] = useState(false)
     const onCloseLocal = () => {
         setClosing(true)
-        console.log('onCloseLocal')
         setTimeout(() => {
-            console.log('onCloseLocal end')
             onClose()
         },900)
     }

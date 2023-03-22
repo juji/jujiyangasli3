@@ -34,7 +34,9 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map(v => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
                 <img src={v.url} alt={v.title} />
-                <button onClick={openZoomer({ src: v.url, alt: v.title })}></button>
+                <button 
+                  aria-label="open image utility"
+                  onClick={openZoomer({ src: v.url, alt: v.title })}></button>
             </div>)}
         </div>
         {loaded && instanceRef.current && slides.length > 1 && (
