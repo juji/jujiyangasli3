@@ -24,10 +24,10 @@ export default function Pendulum(props: isNotHome){
 
         if(typeof window === 'undefined') return () => {};
 
-        innerW.current = window.innerWidth
+        // innerW.current = window.innerWidth
 
         const handleResize = () => {
-            if(window.innerWidth === innerW.current) return;
+            // if(window.innerWidth === innerW.current) return;
             setImage(null)
             setStarted(null)
         }
