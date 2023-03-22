@@ -4,6 +4,7 @@ const tech = [
       id: 'nodejs',
       title: 'NodeJs',
       image: 'https://drive.google.com/uc?id=1xdjl3zl3xZUxN9BdUNJrB662UkbeQZcd',
+      image: '/tech/nodejs.webp',
       url: 'https://nodejs.org'
     },
     {
