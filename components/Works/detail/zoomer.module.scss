@@ -90,10 +90,26 @@
         width: 100%;
         height: 100%;
         cursor: grab;
+
+        .loader{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+
         img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        img.loaded{
+            opacity: 1;
         }
 
         &:active{

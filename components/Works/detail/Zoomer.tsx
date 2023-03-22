@@ -1,6 +1,7 @@
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useState } from 'react'
 import styles from './zoomer.module.scss'
+import Loader from "@/components/utils/Loader"
 
 import {
     FiMinusSquare,
@@ -47,6 +48,8 @@ export default function Zoomer({ src, alt, onClose }: ZoomerProps){
         },900)
     }
 
+    const [ loaded, setLoaded ] = useState(false)
+
   return (<div className={`${styles.zoomer} ${closing?styles.out:''}`}>
     <TransformWrapper
         centerOnInit={true}
@@ -55,7 +58,10 @@ export default function Zoomer({ src, alt, onClose }: ZoomerProps){
             <TransformComponent
                 wrapperClass={styles.wrapper}
                 contentClass={styles.content}
-            ><img src={src} alt={alt} /></TransformComponent>
+            >
+                <Loader className={styles.loader} />
+                <img onLoad={() => setLoaded(true)} className={loaded?styles.loaded:''} src={src} alt={alt} />
+            </TransformComponent>
             <Controls 
                 zoomIn={zoomIn} 
                 zoomOut={zoomOut} 

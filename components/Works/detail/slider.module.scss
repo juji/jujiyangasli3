@@ -16,6 +16,16 @@
             object-fit: contain;
             width: calc(100% - 100px);
             transform: translateX(50px);
+            opacity: 0;
+            transition: opacity 500ms;
+            position: relative;
+        }
+
+        .loader{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
 
         button{
@@ -27,6 +37,12 @@
             background-color: transparent;
             border: 0;
             cursor: pointer;
+        }
+
+        &.loaded{
+            img{
+                opacity: 1;
+            }
         }
     }
 

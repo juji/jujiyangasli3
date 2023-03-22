@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useState, useMemo, useRef } from "react"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import style from './slider.module.scss'
+import Loader from "@/components/utils/Loader"
 
 interface Slide{
     url: string,
@@ -29,16 +30,27 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
     },
   })
 
-  return (
+  const [ imageloaded, setImageLoaded ] = useState(slides.map(v => false))
+  const imageLoadRef = useRef(slides.map(v => false))
+  const onImgLoad = (i: number) =>  () => {
+    imageLoadRef.current[i] = true
+    setImageLoaded([...imageLoadRef.current])
+  }
+
+  return useMemo(() => (
     <div className={style.slider}>
       <div className={style.navigationWrapper}>
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
-            {slides.map((v,i) => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
+            {slides.map((v,i) => <div key={`gallery-${v.title}`} 
+              className={`keen-slider__slide ${style.slide} ${imageloaded[i]?style.loaded:''}`}>
+                <Loader className={style.loader} />
                 <img src={v.url} 
                   srcSet={`${v.thumbnail} 700w, ${v.url}`}
                   sizes="(max-width: 700px) 700px"
                   alt={v.title} 
-                  {...(i?{loading:'lazy'}:{})} />
+                  loading="lazy"
+                  onLoad={onImgLoad(i)}
+                />
                 <button 
                   aria-label="open image utility"
                   onClick={openZoomer({ src: v.url, alt: v.title })}></button>
@@ -67,7 +79,7 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
         )}
       </div>
     </div>
-  )
+  ),[ imageloaded ])
 }
 
 function Arrow(props: {

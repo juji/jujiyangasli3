@@ -95,7 +95,7 @@ module.exports = [
       {
         thumbnail: 'https://drive.google.com/uc?id=1wBdv68WKeVg57MMUmLRlQr7mmW4Fi-jZ',
         url: 'https://drive.google.com/uc?id=1rXD4q6umersymHeyh_itgUKlTvRB-Y7z',
-        title: 'Home'
+        title: 'Home full page'
       },
       {
         thumbnail: 'https://drive.google.com/uc?id=12YCtjtpbJgeMEqP-vWxi40QwrOmmA57A',
