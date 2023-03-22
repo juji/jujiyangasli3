@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react'
+
 import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
