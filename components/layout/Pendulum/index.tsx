@@ -3,11 +3,17 @@ import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
 import isNotHome from '@/components/utils/isNotHome.interface'
 
+interface PendulumImage {
+    src: string, 
+    width: number, 
+    height: number
+}
+
 export default function Pendulum(props: isNotHome){
 
     const { isNotHome } = props
 
-    const [ img, setImage ] = useState<{src: string, width: number, height: number} | null>(null)
+    const [ img, setImage ] = useState<PendulumImage | null>(null)
     const [ started, setStarted ] = useState<number | null>(null)
     const timeout = useRef<ReturnType<typeof setTimeout> | null>()
     const startTime = useRef<number | null>()
@@ -71,8 +77,8 @@ export default function Pendulum(props: isNotHome){
                     canvasRef, 
                     started,
                     0, //maxWidth,
-                    (uri: string, ts: number) => {
-                        if(ts === startTime.current) setImage(uri)
+                    (image: PendulumImage, ts: number) => {
+                        if(ts === startTime.current) setImage(image)
                     })}></canvas> : null }
         </div>
 
