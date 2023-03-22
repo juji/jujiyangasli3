@@ -10,8 +10,6 @@ export default function Menu(props: isNotHome){
 
     const { isNotHome, bottomPlacement } = props;
     const router = useRouter()
-
-    console.log(router)
         
     return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
