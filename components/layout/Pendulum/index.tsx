@@ -72,7 +72,7 @@ export default function Pendulum(props: isNotHome){
                 src={img.src} 
                 height={`${img.height}px`} 
                 width={`${img.width}px`} 
-                alt="pendulum" /> : started ? <canvas 
+                alt="pendulum" /> : started && !isNotHome? <canvas 
                 ref={canvasRef => PendulumFn(
                     canvasRef, 
                     started,
