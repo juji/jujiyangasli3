@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
 import isNotHome from '@/components/utils/isNotHome.interface'
+import { useRouter } from 'next/router'
 
 interface PendulumImage {
     src: string, 
@@ -12,6 +13,7 @@ interface PendulumImage {
 export default function Pendulum(props: isNotHome){
 
     const { isNotHome } = props
+    const router = useRouter()
 
     const [ img, setImage ] = useState<PendulumImage | null>(null)
     const [ started, setStarted ] = useState<number | null>(null)
@@ -40,6 +42,9 @@ export default function Pendulum(props: isNotHome){
     // delay draw start
     useEffect(() => {
 
+        if(router.pathname.match('/work')) return () => {};
+        if(router.pathname.match('/tech')) return () => {};
+
         // first time, start immediately
         if(!started && !timeout.current) {
             
@@ -57,7 +62,7 @@ export default function Pendulum(props: isNotHome){
             },500)
 
         }
-    },[ started ])
+    },[ started, router.pathname ])
 
     return <div className={styles.pendulum} id="pendulum">
 
@@ -68,7 +73,7 @@ export default function Pendulum(props: isNotHome){
                 src={img.src} 
                 height={`${img.height}px`} 
                 width={`${img.width}px`} 
-                alt="pendulum" /> : started? <canvas 
+                alt="pendulum" /> : started ? <canvas 
                 ref={canvasRef => PendulumFn(
                     canvasRef, 
                     started,
