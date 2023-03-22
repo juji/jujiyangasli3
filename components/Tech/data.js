@@ -4,25 +4,28 @@ const tech = [
       id: 'nodejs',
       title: 'NodeJs',
       image: 'https://drive.google.com/uc?id=1xdjl3zl3xZUxN9BdUNJrB662UkbeQZcd',
-      image: '/tech/nodejs.webp',
+      // image: '/tech/nodejs.webp',
       url: 'https://nodejs.org'
     },
     {
       id: 'firebase',
       title: 'Firebase',
       image: 'https://drive.google.com/uc?id=1PDfwgfhh_j6EXuUs0zWSZXmoGNgoWlZ0',
+      // image: '/tech/firebase.webp',
       url: 'https://firebase.google.com/?hl=id'
     },
     {
       id: 'docker',
       title: 'Docker',
       image: 'https://drive.google.com/uc?id=1GJ4lOofgz7g9sN1Zy_Qnw_ZlCGPUTkEd',
+      // image: '/tech/docker.webp',
       url: 'https://www.docker.com/'
     },
     {
       id: 'cloudflare',
       title: 'CloudFlare',
       image: 'https://drive.google.com/uc?id=1Uzxbx6hhY9cp9jmkf24TubWYEbc_tf2y',
+      // image: '/tech/cloudflare.webp',
       url: 'https://www.cloudflare.com'
     }
   ],
@@ -31,20 +34,16 @@ const tech = [
       id: 'express',
       title: 'Express.js',
       image: 'https://drive.google.com/uc?id=1pJ2djQU_jd72TpcyAF2vLs_v7MotCqFk',
+      // image: '/tech/expressjs.webp',
       url: 'https://expressjs.com/'
     },
     {
       id: 'next',
       title: 'Next.js',
       image: 'https://drive.google.com/uc?id=1Md44pUMo0mm3wS84y1U3090S_PtxBveX',
+      // image: '/tech/nextjs.webp',
       url: 'https://nextjs.org/'
     },
-    // {
-    //   id: 'socketio',
-    //   title: 'Socket.io',
-    //   image: 'https://drive.google.com/uc?id=1_a8qwjGx6jG-Bp8_dyPGpi64bl6blL5N',
-    //   url: 'https://socket.io/'
-    // },
     // {
     //   id: 'adonis',
     //   title: 'Adonis.js',
@@ -57,6 +56,7 @@ const tech = [
       id: 'socketio',
       title: 'Socket.io',
       image: 'https://drive.google.com/uc?id=1_a8qwjGx6jG-Bp8_dyPGpi64bl6blL5N',
+      // image: '/tech/socketio.webp',
       url: 'https://socket.io/'
     },
     // {
@@ -69,6 +69,7 @@ const tech = [
       id: 'electron',
       title: 'Electron',
       image: 'https://drive.google.com/uc?id=1niSB7iK4tNFgtcyBugszKJLjrjw26xgt',
+      // image: '/tech/electron.webp',
       url: 'https://electronjs.org/'
     },
     // {
@@ -89,12 +90,14 @@ const tech = [
       id: 'mongo',
       title: 'Mongo DB',
       image: 'https://drive.google.com/uc?id=1njEsakrRbO4abk5-DDa5OmEH0wREg5JW',
+      // image: '/tech/mongo.webp',
       url: 'https://www.mongodb.com/'
     },
     {
       id: 'postgres',
       title: 'PostgreSQL',
       image: 'https://drive.google.com/uc?id=1SbuGEKbYmCqENeHo3SaLz_IiedcBrNEp',
+      // image: '/tech/postgre.webp',
       url: 'https://www.postgresql.org/'
     },
     {
