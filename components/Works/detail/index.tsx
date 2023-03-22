@@ -3,8 +3,11 @@ import { useRouter } from 'next/router'
 import data from '../works'
 import styles from './detail.module.scss'
 import Link from 'next/link'
+
+import dynamic from 'next/dynamic'
 import Slider from './Slider'
-import Zoomer from './Zoomer'
+const Zoomer = dynamic(() => import('./Zoomer'), { ssr: false })
+
 
 interface WorkDetailProps{
     children: ReactNode
