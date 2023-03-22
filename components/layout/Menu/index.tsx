@@ -8,10 +8,10 @@ import { useRouter } from 'next/router'
 
 export default function Menu(props: isNotHome){
 
-    const { isNotHome, bottomPlacement } = props;
+    const { isNotHome, bottomPlacement, className } = props;
     const router = useRouter()
         
-    return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
+    return <nav className={`${className} ${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isNotHome ? <div className="menuItem" id={styled.menuHome}>

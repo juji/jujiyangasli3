@@ -11,6 +11,12 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 
 import type { AppProps } from 'next/app'
+import { Open_Sans } from 'next/font/google'
+
+const openSans = Open_Sans({
+    subsets: ['latin'],
+    weight: '400'
+})
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -31,8 +37,10 @@ export default function App({ Component, pageProps }: AppProps) {
     </Script>
     <Header isNotHome={isNotHome} />
     <Pendulum isNotHome={isNotHome} />
-    <Menu isNotHome={isNotHome} bottomPlacement={true} />
-    <main>
+    <Menu className={openSans.className} 
+      isNotHome={isNotHome} 
+      bottomPlacement={true} />
+    <main className={openSans.className}>
       <div id="content">
         <Component {...pageProps} />
       </div>

@@ -1,16 +1,20 @@
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 import styles from './header.module.scss'
 import Link from 'next/link'
 import isNotHome from '@/components/utils/isNotHome.interface'
+import { Source_Serif_Pro } from 'next/font/google'
+
+const sourceSerif = Source_Serif_Pro({
+    subsets: ['latin'],
+    weight: '400'
+})
 
 export default function Header(props: isNotHome){
 
     const { isNotHome } = props;
     
     return <div 
-        className={`${styles.header} ${isNotHome ? styles.intersected : ''}`} 
+        className={`${sourceSerif.className} ${styles.header} ${isNotHome ? styles.intersected : ''}`} 
         id="header">
         <Link href='/' className={styles.logo} id="logo">juji&nbsp;{'}'};</Link>
     </div>
