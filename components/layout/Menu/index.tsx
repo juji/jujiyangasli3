@@ -11,11 +11,7 @@ export default function Menu(props: isNotHome){
     const { isNotHome, bottomPlacement } = props;
     const router = useRouter()
 
-    const [ page, setPage  ] = useState<string | null>(null)
-
-    useEffect(() => {
-        setPage(router.pathname);
-    },[ router.pathname ])
+    console.log(router)
         
     return <nav className={`${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
@@ -24,13 +20,13 @@ export default function Menu(props: isNotHome){
                     <Link href="/"><TiHome /></Link>
                 </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
-                    <Link className={page?.match('/works')?styled.active:''} href="/works">works</Link>
+                    <Link className={router.pathname === '/works'?styled.active:''} href="/works">works</Link>
                 </div>
                 <div className="menuItem" id={styled.menuTech}>
-                    <Link className={page?.match('/tech')?styled.active:''} href="/tech">tech</Link>
+                    <Link className={router.pathname === '/tech'?styled.active:''} href="/tech">tech</Link>
                 </div>
                 <div className="menuItem" id={styled.menuContact}>
-                    <Link className={page?.match('/contact')?styled.active:''} href="/contact">contact</Link>
+                    <Link className={router.pathname === '/contact'?styled.active:''} href="/contact">contact</Link>
                 </div>
             </div>
         </div>
