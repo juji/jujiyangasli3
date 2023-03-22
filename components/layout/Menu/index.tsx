@@ -14,8 +14,8 @@ export default function Menu(props: isNotHome){
     return <nav className={`${className} ${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
-                {isNotHome ? <div className="menuItem" aria-label="Go to homepage" id={styled.menuHome}>
-                    <Link href="/"><TiHome /></Link>
+                {isNotHome ? <div className="menuItem" id={styled.menuHome}>
+                    <Link aria-label="Go to homepage" href="/"><TiHome /></Link>
                 </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
                     <Link className={router.pathname === '/works'?styled.active:''} href="/works">works</Link>
