@@ -17,7 +17,7 @@ const DoublePendulum = function(
 
 
     this.width = maxWidth ? Math.min(window.innerWidth, maxWidth) : window.innerWidth
-    this.height = window.innerHeight
+    this.height = window.innerHeight + 60
 
     this.callback = callback
     this.canvas = canvas;
