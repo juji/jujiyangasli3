@@ -5,7 +5,8 @@ import style from './slider.module.scss'
 
 interface Slide{
     url: string,
-    title: string
+    title: string,
+    thumbnail: string
 }
 
 interface SlideImages{
@@ -33,7 +34,10 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
       <div className={style.navigationWrapper}>
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map(v => <div key={`gallery-${v.title}`} className={`keen-slider__slide ${style.slide}`}>
-                <img src={v.url} alt={v.title} />
+                <img src={v.url} 
+                  srcSet={`${v.thumbnail} 700w, ${v.url}`}
+                  sizes="(max-width: 700px) 700px"
+                  alt={v.title} />
                 <button 
                   aria-label="open image utility"
                   onClick={openZoomer({ src: v.url, alt: v.title })}></button>
