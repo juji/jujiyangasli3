@@ -24,7 +24,8 @@ export default function WorkTile(props: WorkTileInterface){
 
     const { id, workId, images, title, className, lazyLoad } = props
     
-    const [ loaded, setLoaded ] = useState(lazyLoad ? false : true)
+    // const [ loaded, setLoaded ] = useState(lazyLoad ? false : true)
+    const [ loaded, setLoaded ] = useState(true)
     const onLoad = () => {
         setLoaded(true)
     }
