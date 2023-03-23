@@ -46,8 +46,10 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
                 <img 
                   loading="lazy"
                   onLoad={onImgLoad(i)}
-                  src={v.url} 
-                  srcSet={`${v.thumbnail} 700w, ${v.url}`}
+                  ref={r => { if(r){
+                    r.srcset=`${v.thumbnail} 700w, ${v.url}`
+                    r.src=v.url
+                  }}}
                   sizes="(max-width: 700px) 700px"
                   alt={v.title} 
                 />

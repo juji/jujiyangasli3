@@ -62,7 +62,8 @@ export default function Zoomer({ src, alt, onClose }: ZoomerProps){
                 <Loader className={styles.loader} />
                 <img onLoad={() => setLoaded(true)} 
                 className={loaded?styles.loaded:''} 
-                src={src} alt={alt} />
+                ref={r => {if(r) r.src = src}}
+                alt={alt} />
             </TransformComponent>
             <Controls 
                 zoomIn={zoomIn} 

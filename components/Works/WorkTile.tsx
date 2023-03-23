@@ -41,7 +41,8 @@ export default function WorkTile(props: WorkTileInterface){
         className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
         <img 
         onLoad={onLoad}
-        src={images[0].thumbnail} alt={title} 
+        ref={r => { if(r) r.src = images[0].thumbnail }}
+        alt={title} 
         {...(lazyLoad ? {loading:'lazy'}:{})} />
         <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         <Loader className={style.loader} />
