@@ -35,7 +35,8 @@ export default function WorkTile(props: WorkTileInterface){
         e.stopImmediatePropagation && e.stopImmediatePropagation();
         return false;
     }
-
+    
+    // https://www.codingwithjesse.com/blog/image-onload-isnt-being-called/
     return <div id={id} 
         onContextMenu={preventContextMenu}
         className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
