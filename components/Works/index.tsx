@@ -1,6 +1,6 @@
 
 import style from './works.module.scss'
-import works from './works.js'
+import works from './works.local'
 import WorkTile from './WorkTile'
 
 export default function Works(){

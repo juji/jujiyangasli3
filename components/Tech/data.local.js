@@ -93,19 +93,19 @@ const tech = [
     // {
     //   id: 'nats',
     //   title: 'NATS',
-    //   image: 'https://drive.google.com/uc?id=1RSM7EgN49vgMmmTTZyX-a3lx50stXLaW',
+    //   image: '/images/tech/nats.webp',
     //   url: 'https://nats.io/'
     // },
     // {
     //   id: 'elastic',
     //   title: 'Elastic Search',
-    //   image: 'https://drive.google.com/uc?id=1F5nDUAyCurDKPwUF72kAPWZJ_416_lXC',
+    //   image: '/images/tech/elastic.webp',
     //   url: 'https://www.elastic.co/'
     // },
     {
       id: 'rabbit',
       title: 'RabbitMQ',
-      image: 'https://drive.google.com/uc?id=1f7JaSk45TkpCRfaigjTF3KOVoK7dksYf',
+      image: '/images/tech/rabbitmq.webp',
       url: 'https://www.rabbitmq.com/'
     }
   ],
@@ -113,25 +113,25 @@ const tech = [
     {
       id: 'do',
       title: 'Digital Ocean',
-      image: 'https://drive.google.com/uc?id=1VXwSv8YJkkGYSwtu24IsoXTIuuh3ViDp',
+      image: '/images/tech/digitalocean.webp',
       url: 'https://www.digitalocean.com/'
     },
     {
       id: 'ec2',
       title: 'AWS EC2',
-      image: 'https://drive.google.com/uc?id=1RiA0m_saSn_UAuqdAca39c7_c4Gejnwm',
+      image: '/images/tech/ec2.webp',
       url: 'https://aws.amazon.com/ec2/'
     },
     {
       id: 's3',
       title: 'AWS S3',
-      image: 'https://drive.google.com/uc?id=1H7v9yxJF_AOhdnVJc8F-Beg6LV91mBTW',
+      image: '/images/tech/s3.webp',
       url: 'https://aws.amazon.com/s3/'
     },
     {
       id: 'beanstalk',
       title: 'AWS Elastic Beanstalk',
-      image: 'https://drive.google.com/uc?id=1xGnmgVXuJnHQnmZISWyY0M_44eHHVBxd',
+      image: '/images/tech/beanstalk.webp',
       url: 'https://aws.amazon.com/elasticbeanstalk/'
     }
   ],
@@ -139,19 +139,19 @@ const tech = [
     {
       id: 'stripe',
       title: 'Stripe',
-      image: 'https://drive.google.com/uc?id=1O2RZI2eC-5zvat-COsN_RUE8unH3zYvb',
+      image: '/images/tech/stripe.webp',
       url: 'https://stripe.com/'
     },
     {
       id: 'algolia',
       title: 'Algolia',
-      image: 'https://drive.google.com/uc?id=1B3OQs1D_T42jXOsAiVkQ-vBzxcewQowy',
+      image: '/images/tech/algolia.webp',
       url: 'https://www.algolia.com/'
     },
     {
       id: 'twilio',
       title: 'Twilio',
-      image: 'https://drive.google.com/uc?id=1IVcNdQ0OdTyW-jsccZppfJcsioeIyQgX',
+      image: '/images/tech/twilio.webp',
       url: 'https://www.twilio.com/'
     },
   ],
@@ -159,19 +159,19 @@ const tech = [
     {
       id: 'mailchimp',
       title: 'Mailchimp',
-      image: 'https://drive.google.com/uc?id=1Iua2I2_M4UpqyUmnQz5bsYd1VnLPRr86',
+      image: '/images/tech/mailchimp.webp',
       url: 'https://mailchimp.com/'
     },
     {
       id: 'mailgun',
       title: 'Mailgun',
-      image: 'https://drive.google.com/uc?id=1UDJ9-lLF_fM8weYeqlRZXBSiNhf_xyQy',
+      image: '/images/tech/mailgun.webp',
       url: 'https://www.mailgun.com/'
     },
     {
       id: 'sendgrid',
       title: 'Sendgrid',
-      image: 'https://drive.google.com/uc?id=1ctXuZ_bTfY9-hKpCSakyZhmABpAns9nh',
+      image: '/images/tech/sendgrid.webp',
       url: 'https://sendgrid.com/'
     },
   ],
@@ -179,19 +179,19 @@ const tech = [
     {
       id: 'github',
       title: 'Github',
-      image: 'https://drive.google.com/uc?id=15xFdTcpeycgFa4JI59UhOOdNRNcBh2gZ',
+      image: '/images/tech/github.webp',
       url: 'https://github.com'
     },
     {
       id: 'gitlab',
       title: 'Gitlab',
-      image: 'https://drive.google.com/uc?id=1a1nIU6nk4iWw4kjIBYiTEILYwukTFemH',
+      image: '/images/tech/gitlab.webp',
       url: 'https://gitlab.com'
     },
     {
       id: 'bitbucket',
       title: 'Bitbucket',
-      image: 'https://drive.google.com/uc?id=1QOJ4IvjGG7Kpc3-KOzG6LPdffvgIRhVn',
+      image: '/images/tech/bitbucket.webp',
       url: 'https://bitbucket.org/'
     }
   ]
