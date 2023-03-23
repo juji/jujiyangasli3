@@ -24,7 +24,7 @@ export default function TechCell(props: TechProps){
         aria-label={title} 
         target="_blank" rel="noopener noreferrer">
             <div className={style.imageContainer}>
-                <img onLoad={onLoad} src={image} alt={title} loading="lazy" />
+                <img onLoad={onLoad} ref={r => {if(r) r.src=image}} alt={title} loading="lazy" />
             </div>
             <Loader className={`${style.loader}`} />
         </a>
