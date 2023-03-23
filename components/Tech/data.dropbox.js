@@ -4,6 +4,7 @@ const tech = [
       id: 'nodejs',
       title: 'NodeJs',
       image: 'https://drive.google.com/uc?id=1xdjl3zl3xZUxN9BdUNJrB662UkbeQZcd',
+      image: 'https://www.dropbox.com/s/u7igjck04q5m9qu/nodejs.webp?raw=1',
       url: 'https://nodejs.org'
     },
     {
@@ -36,6 +37,7 @@ const tech = [
       id: 'next',
       title: 'Next.js',
       image: 'https://drive.google.com/uc?id=1Md44pUMo0mm3wS84y1U3090S_PtxBveX',
+      image: 'https://www.dropbox.com/s/fub98zhgdtzewvu/nextjs.webp?raw=1',
       url: 'https://nextjs.org/'
     },
     // {
@@ -50,12 +52,14 @@ const tech = [
       id: 'socketio',
       title: 'Socket.io',
       image: 'https://drive.google.com/uc?id=1_a8qwjGx6jG-Bp8_dyPGpi64bl6blL5N',
+      image: 'https://www.dropbox.com/s/zn8uiugqabh7sfv/socketio.webp?raw=1',
       url: 'https://socket.io/'
     },
     // {
     //   id: 'react',
     //   title: 'React.js',
     //   image: 'https://drive.google.com/uc?id=1OobT2TFbsSZcZtOP9O_WcECUVkRmIbeO',
+    //   image: 'https://www.dropbox.com/s/1v32exddht05zic/react.webp?raw=1',
     //   url: 'https://reactjs.org/'
     // },
     {
@@ -88,6 +92,7 @@ const tech = [
       id: 'postgres',
       title: 'PostgreSQL',
       image: 'https://drive.google.com/uc?id=1SbuGEKbYmCqENeHo3SaLz_IiedcBrNEp',
+      image: 'https://www.dropbox.com/s/9v50vdqcsrwnn67/postgre.webp?raw=1',
       url: 'https://www.postgresql.org/'
     },
     {
@@ -118,6 +123,7 @@ const tech = [
       id: 'rabbit',
       title: 'RabbitMQ',
       image: 'https://drive.google.com/uc?id=1f7JaSk45TkpCRfaigjTF3KOVoK7dksYf',
+      image: 'https://www.dropbox.com/s/xzv3pja13bao6h9/rabbitmq.webp?raw=1',
       url: 'https://www.rabbitmq.com/'
     }
   ],
@@ -138,12 +144,14 @@ const tech = [
       id: 's3',
       title: 'AWS S3',
       image: 'https://drive.google.com/uc?id=1H7v9yxJF_AOhdnVJc8F-Beg6LV91mBTW',
+      image: 'https://www.dropbox.com/s/jkz48nqw9vptu9h/s3.webp?raw=1',
       url: 'https://aws.amazon.com/s3/'
     },
     {
       id: 'beanstalk',
       title: 'AWS Elastic Beanstalk',
       image: 'https://drive.google.com/uc?id=1xGnmgVXuJnHQnmZISWyY0M_44eHHVBxd',
+      image: 'https://www.dropbox.com/s/ucpifedt64gbdes/redis.webp?raw=1',
       url: 'https://aws.amazon.com/elasticbeanstalk/'
     }
   ],
@@ -152,6 +160,7 @@ const tech = [
       id: 'stripe',
       title: 'Stripe',
       image: 'https://drive.google.com/uc?id=1O2RZI2eC-5zvat-COsN_RUE8unH3zYvb',
+      image: 'https://www.dropbox.com/s/3e9gcuf0ot8gt0t/stripe.webp?raw=1',
       url: 'https://stripe.com/'
     },
     {
@@ -163,7 +172,7 @@ const tech = [
     {
       id: 'twilio',
       title: 'Twilio',
-      image: 'https://drive.google.com/uc?id=1IVcNdQ0OdTyW-jsccZppfJcsioeIyQgX',
+      image: 'https://www.dropbox.com/s/25eyz20a6mhqn2w/twilio.webp?raw=1',
       url: 'https://www.twilio.com/'
     },
   ],
@@ -184,6 +193,7 @@ const tech = [
       id: 'sendgrid',
       title: 'Sendgrid',
       image: 'https://drive.google.com/uc?id=1ctXuZ_bTfY9-hKpCSakyZhmABpAns9nh',
+      image: 'https://www.dropbox.com/s/y0nud1q8e8y1gu8/sendgrid.webp?raw=1',
       url: 'https://sendgrid.com/'
     },
   ],

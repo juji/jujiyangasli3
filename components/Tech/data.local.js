@@ -3,25 +3,25 @@ const tech = [
     {
       id: 'nodejs',
       title: 'NodeJs',
-      image: 'https://drive.google.com/uc?id=1xdjl3zl3xZUxN9BdUNJrB662UkbeQZcd',
+      image: '/images/tech/nodejs.webp',
       url: 'https://nodejs.org'
     },
     {
       id: 'firebase',
       title: 'Firebase',
-      image: 'https://drive.google.com/uc?id=1PDfwgfhh_j6EXuUs0zWSZXmoGNgoWlZ0',
+      image: '/images/tech/firebase.webp',
       url: 'https://firebase.google.com/?hl=id'
     },
     {
       id: 'docker',
       title: 'Docker',
-      image: 'https://drive.google.com/uc?id=1GJ4lOofgz7g9sN1Zy_Qnw_ZlCGPUTkEd',
+      image: '/images/tech/docker.webp',
       url: 'https://www.docker.com/'
     },
     {
       id: 'cloudflare',
       title: 'CloudFlare',
-      image: 'https://drive.google.com/uc?id=1Uzxbx6hhY9cp9jmkf24TubWYEbc_tf2y',
+      image: '/images/tech/cloudflare.webp',
       url: 'https://www.cloudflare.com'
     }
   ],
@@ -29,51 +29,39 @@ const tech = [
     {
       id: 'express',
       title: 'Express.js',
-      image: 'https://drive.google.com/uc?id=1pJ2djQU_jd72TpcyAF2vLs_v7MotCqFk',
+      image: '/images/tech/expressjs.webp',
       url: 'https://expressjs.com/'
     },
     {
       id: 'next',
       title: 'Next.js',
-      image: 'https://drive.google.com/uc?id=1Md44pUMo0mm3wS84y1U3090S_PtxBveX',
+      image: '/images/tech/nextjs.webp',
       url: 'https://nextjs.org/'
     },
-    // {
-    //   id: 'adonis',
-    //   title: 'Adonis.js',
-    //   image: 'https://drive.google.com/uc?id=1-3NKADUU--TXERUewPhxNxIdxX3Ih57B',
-    //   url: 'https://adonisjs.com/'
-    // },
   ],
   [
     {
       id: 'socketio',
       title: 'Socket.io',
-      image: 'https://drive.google.com/uc?id=1_a8qwjGx6jG-Bp8_dyPGpi64bl6blL5N',
+      image: '/images/tech/socketio.webp',
       url: 'https://socket.io/'
     },
-    // {
-    //   id: 'react',
-    //   title: 'React.js',
-    //   image: 'https://drive.google.com/uc?id=1OobT2TFbsSZcZtOP9O_WcECUVkRmIbeO',
-    //   url: 'https://reactjs.org/'
-    // },
     {
       id: 'electron',
       title: 'Electron',
-      image: 'https://drive.google.com/uc?id=1niSB7iK4tNFgtcyBugszKJLjrjw26xgt',
+      image: '/images/tech/electron.webp',
       url: 'https://electronjs.org/'
     },
     // {
     //   id: 'html5',
     //   title: 'HTML 5',
-    //   image: 'https://drive.google.com/uc?id=1rhen_bvKk0LFQLQWbigDFcd3UVdT1HRv',
+    //   image: '/images/tech/html5.webp',
     //   url: 'https://en.wikipedia.org/wiki/HTML5'
     // },
     // {
     //   id: 'css3',
     //   title: 'CSS 3',
-    //   image: 'https://drive.google.com/uc?id=1HJt8a7hhKi9hbGIqZrfzV-mr6dq4B50i',
+    //   image: '/images/tech/css3.webp',
     //   url: 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets'
     // }
   ],
@@ -81,25 +69,25 @@ const tech = [
     {
       id: 'mongo',
       title: 'Mongo DB',
-      image: 'https://drive.google.com/uc?id=1njEsakrRbO4abk5-DDa5OmEH0wREg5JW',
+      image: '/images/tech/mongo.webp',
       url: 'https://www.mongodb.com/'
     },
     {
       id: 'postgres',
       title: 'PostgreSQL',
-      image: 'https://drive.google.com/uc?id=1SbuGEKbYmCqENeHo3SaLz_IiedcBrNEp',
+      image: '/images/tech/postgre.webp',
       url: 'https://www.postgresql.org/'
     },
     {
       id: 'mysql',
       title: 'MySQL',
-      image: 'https://drive.google.com/uc?id=1eKBSUikTuDrJ59wEv6NanTds6g-vqLds',
+      image: '/images/tech/mysql.webp',
       url: 'https://www.mysql.com/'
     },
     {
       id: 'redis',
       title: 'Redis',
-      image: 'https://drive.google.com/uc?id=1bTGvc7pbV8hjkgPYIuHuJUh_uo1iZ8GD',
+      image: '/images/tech/redis.webp',
       url: 'https://redis.io/'
     },
     // {
