@@ -37,8 +37,7 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
     setImageLoaded([...imageLoadRef.current])
   }
 
-  return useMemo(() => (
-    <div className={style.slider}>
+  return <div className={style.slider}>
       <div className={style.navigationWrapper}>
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map((v,i) => <div key={`gallery-${v.title}`} 
@@ -79,7 +78,6 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
         )}
       </div>
     </div>
-  ),[ imageloaded ])
 }
 
 function Arrow(props: {
