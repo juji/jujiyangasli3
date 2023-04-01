@@ -30,9 +30,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <HtmlHead />
     <Script id="sw-register" strategy="afterInteractive">
     {`
-        console.log('version: 1')
         if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/sw.js?v=1')
         }
     `}
     </Script>
