@@ -1,0 +1,59 @@
+.toggleLabel {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  strong{
+    position: absolute;
+    top: 0;
+    left: 53px;
+    height: 20px;
+    line-height: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  
+  span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2c3e50;
+    transition: 0.3s;
+    border-radius: 20px;
+  }
+  
+  span:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 2.6px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  input:checked + span {
+    background-color: #00c853;
+  }
+  
+  input:checked + span:before {
+    transform: translateX(20px);
+  }
+
+  input:checked ~ strong {
+    opacity: 1;
+  }
+}
+

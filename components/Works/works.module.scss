@@ -9,6 +9,17 @@
     }
 }
 
+@keyframes fadeInZombie {
+    0%{
+        opacity: 0;
+        transform: translate(0, 34px);
+    }
+    100%{
+        opacity: 0.3;
+        transform: translate(0, 0px);
+    }
+}
+
 .works{
 
     max-width: var(--maxWidth);
@@ -19,13 +30,36 @@
         animation-fill-mode: both;
     }
 
-    .par{
+    .top{
         margin-bottom: 55px;
-        animation-name: fadeIn;
-        animation-duration: 400ms;
-        animation-delay: 100ms;
-        animation-fill-mode: both;
+
+        .par{
+            animation-name: fadeIn;
+            animation-duration: 400ms;
+            animation-delay: 100ms;
+            animation-fill-mode: both;
+            margin-bottom: 13px;
+        }
+
+        .toggle{
+            animation-name: fadeIn;
+            animation-duration: 400ms;
+            animation-delay: 200ms;
+            animation-fill-mode: both;
+            margin-bottom: 13px;
+        }
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            justify-content: space-between;
+
+            .toggle{
+                position: relative;
+                left: -140px;
+            }
+        }
     }
+
 
     .workGrid{
 
@@ -46,6 +80,13 @@
             animation-name: fadeIn;
             animation-duration: 400ms;
             animation-fill-mode: both;
+
+            &.zombie{
+               animation-name: fadeIn;
+               img{
+                opacity: 0.3;
+               }
+            }
 
         }
 
