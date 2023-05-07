@@ -9,7 +9,7 @@ export default function Works(){
     return <div className={`${style.works} page`} id="works">
         
         <h1 className={`${style.h1}`}>Works</h1>
-        <p className={`${style.par}`}>My works -- that i remember ;)</p>
+        <p className={`${style.par}`}>My works -- that are still alive ;)</p>
 
         <div className={style.workGrid}>
             {works.map((v,i) => <WorkTile 

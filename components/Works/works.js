@@ -32,55 +32,55 @@ module.exports = [
       }
     ]
   },
-  {
-    id: 'clubrow',
-    year: '2019',
-    title:'Clubrow',
-    url: 'https://www.instagram.com/club.row/',
-    images: [
-      {
-        thumbnail: 'https://drive.google.com/uc?id=1dWx1e16mToZLxPxrFlFG-HKmlZyQCN0R',
-        url: 'https://drive.google.com/uc?id=1pZVi6zv7fzBGl_IqGBcdyPkhwPcSGn1N',
-        title: 'Homepage'
-      }
-    ]
-  },
-  {
-    id: 'amber',
-    title:'Amber Video',
-    year: '2018',
-    url: 'https://www.linkedin.com/company/ambervideo',
-    images: [
-      {
-        thumbnail: 'https://drive.google.com/uc?id=1GtdUh-lWrj_-84JiQgoLN1x7qMOb5dFV',
-        url: 'https://drive.google.com/uc?id=1VMmqjXFJ9MwTz_J3MwDPLBpW_iNy4Aa3',
-        title: 'Home'
-      },
-      {
-        thumbnail: 'https://drive.google.com/uc?id=1mtS5EB9smyitaBD5vv37gfYvovoUpg8L',
-        url: 'https://drive.google.com/uc?id=1uKPXWlhTVU4VzcfXpTuM1rLVY1nR4VnW',
-        title: 'Videos'
-      },
-      {
-        thumbnail: 'https://drive.google.com/uc?id=1xdBgz3PP5Q97p8nfdij1FfhVqjyAqibF',
-        url: 'https://drive.google.com/uc?id=1jYkYL08VKGp5VLp0LD13dP5_hYGsuib6',
-        title: 'Video Detail with comparison'
-      }
-    ]
-  },
-  {
-    id: 'methodicate',
-    year: '2018',
-    title:'Methodicate',
-    url: 'https://twitter.com/methodicate',
-    images: [
-      {
-        thumbnail: 'https://drive.google.com/uc?id=1h4VFygQOO4yBpDBH36tMxBFK5uRReWQ-',
-        url: 'https://drive.google.com/uc?id=1DiUsi-k1iyDWkYP6XoSRYaUr7r8pHjvg',
-        title: 'landing'
-      }
-    ]
-  },
+  // {
+  //   id: 'clubrow',
+  //   year: '2019',
+  //   title:'Clubrow',
+  //   url: 'https://www.instagram.com/club.row/',
+  //   images: [
+  //     {
+  //       thumbnail: 'https://drive.google.com/uc?id=1dWx1e16mToZLxPxrFlFG-HKmlZyQCN0R',
+  //       url: 'https://drive.google.com/uc?id=1pZVi6zv7fzBGl_IqGBcdyPkhwPcSGn1N',
+  //       title: 'Homepage'
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 'amber',
+  //   title:'Amber Video',
+  //   year: '2018',
+  //   url: 'https://www.linkedin.com/company/ambervideo',
+  //   images: [
+  //     {
+  //       thumbnail: 'https://drive.google.com/uc?id=1GtdUh-lWrj_-84JiQgoLN1x7qMOb5dFV',
+  //       url: 'https://drive.google.com/uc?id=1VMmqjXFJ9MwTz_J3MwDPLBpW_iNy4Aa3',
+  //       title: 'Home'
+  //     },
+  //     {
+  //       thumbnail: 'https://drive.google.com/uc?id=1mtS5EB9smyitaBD5vv37gfYvovoUpg8L',
+  //       url: 'https://drive.google.com/uc?id=1uKPXWlhTVU4VzcfXpTuM1rLVY1nR4VnW',
+  //       title: 'Videos'
+  //     },
+  //     {
+  //       thumbnail: 'https://drive.google.com/uc?id=1xdBgz3PP5Q97p8nfdij1FfhVqjyAqibF',
+  //       url: 'https://drive.google.com/uc?id=1jYkYL08VKGp5VLp0LD13dP5_hYGsuib6',
+  //       title: 'Video Detail with comparison'
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 'methodicate',
+  //   year: '2018',
+  //   title:'Methodicate',
+  //   url: 'https://twitter.com/methodicate',
+  //   images: [
+  //     {
+  //       thumbnail: 'https://drive.google.com/uc?id=1h4VFygQOO4yBpDBH36tMxBFK5uRReWQ-',
+  //       url: 'https://drive.google.com/uc?id=1DiUsi-k1iyDWkYP6XoSRYaUr7r8pHjvg',
+  //       title: 'landing'
+  //     }
+  //   ]
+  // },
   {
     id: 'bridestory',
     year: '2015 - 2016',
