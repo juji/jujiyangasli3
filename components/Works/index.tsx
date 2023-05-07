@@ -6,7 +6,7 @@ import Toggle from '@/components/utils/Toggle'
 
 export default function Works(){
 
-    const [ showZombies, setShowZombies ] = useState(true)
+    const [ showZombies, setShowZombies ] = useState(false)
     const zombieLabel = useMemo(() => {
         return showZombies?<>Zombies&nbsp;Shown</> : <>Show&nbsp;Zombies</>
     },[ showZombies ])
@@ -25,7 +25,8 @@ export default function Works(){
         <div className={style.top}>
             <p className={`${style.par}`}>My works -- that i remember ;)</p>
             <div className={style.toggle}>
-                <Toggle onClick={setShowZombies} toggled={showZombies} label={zombieLabel} />
+                <Toggle onClick={setShowZombies} 
+                    toggled={showZombies} label={zombieLabel} />
             </div>
         </div>
 
