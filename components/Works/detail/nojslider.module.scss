@@ -1,0 +1,120 @@
+
+
+.sliderContainer{
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .slider{
+
+    position:relative;
+    width: 100%;
+    height: 100%;
+
+    .slides{
+
+      display: flex;
+      overflow-x: scroll;
+      // overflow: hidden;
+      position: relative;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+      height: 100%;
+
+      @media screen and (min-width:913px) {
+        overflow: hidden;
+      }
+
+      .slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        margin-right: 0px;
+        box-sizing: border-box;
+        transform-origin: center center;
+        transform: scale(1);
+        scroll-snap-align: center;
+
+        button{
+          border: none;
+          background: transparent;
+          height: 100%;
+          width: 100%;
+          @media screen and (min-width:913px) {
+            width: calc(100% - 100px);
+          }
+
+          img{
+            // width: 100%;
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+            // width: calc(100% - 100px);
+            // transform: translateX(50px);
+            // opacity: 0;
+            // transition: opacity 500ms;
+            position: relative;
+            
+          }
+        }
+
+      }
+
+    }
+
+    .slide a {
+      background: none;
+      border: none;
+    }
+    
+    a.slidePrev,
+    &::before {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      left: 1.6%;
+    }
+    
+    a.slideNext,
+    &::after {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        right: 1.6%;
+    }
+    
+    &::before,
+    &::after,
+    .slidePrev,
+    .slideNext {
+        position: absolute;
+        top: 50%;
+        width: 21px;
+        height: 21px;
+        border: solid white;
+        border-width: 0 4px 4px 0;
+        padding: 3px;
+        box-sizing: border-box;
+        display: none;
+        @media screen and (min-width:913px) {
+          display: initial;
+        }
+    }
+    
+    &::before,
+    &::after {
+      content: '';
+      z-index: 1;
+      background: none;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+  }
+
+}

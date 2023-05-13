@@ -5,7 +5,8 @@ import styles from './detail.module.scss'
 import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
-import Slider from './Slider'
+// import Slider from './Slider'
+import NojsSlider from './NojsSlider'
 const Zoomer = dynamic(() => import('./Zoomer'), { ssr: false })
 
 
@@ -25,11 +26,10 @@ export default function WorkDetail({ children }: WorkDetailProps){
     const openZoomer = (obj: { src: string, alt: string }) => () => setZoomer(obj)
     const closeZoomer = () => setZoomer(null)
 
-
     return project ? <div className={`${styles.workDetail} page`}>
         <div className={styles.image}>
             <div>
-                <Slider slides={project.images} openZoomer={openZoomer} />
+                <NojsSlider slides={project.images} openZoomer={openZoomer} />
             </div>
         </div>
         <div className={styles.text}>

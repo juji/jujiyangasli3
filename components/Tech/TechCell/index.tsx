@@ -14,7 +14,7 @@ export default function TechCell(props: TechProps){
 
     return <a href={url}
         id={id}
-        className={`${style.cell} ${style.loaded} ${className}`}
+        className={`${style.cell} ${style.loaded} ${className} noline`}
         title={title}
         aria-label={title} 
         target="_blank" rel="noopener noreferrer">
