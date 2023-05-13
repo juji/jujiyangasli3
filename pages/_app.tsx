@@ -21,7 +21,7 @@ const openSans = Open_Sans({
 export default function App({ Component, pageProps }: AppProps) {
 
   const router = useRouter()
-  const [isNotHome, setisNotHome] = useState(false)
+  const [isNotHome, setisNotHome] = useState(router.pathname !== '/')
   useEffect(() => {
       setisNotHome(router.pathname !== '/')
   },[ router.pathname ])
@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Script id="sw-register" strategy="afterInteractive">
     {`
         if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('/sw.js?v=1')
+        navigator.serviceWorker.register('/sw.js?v=2')
         }
     `}
     </Script>

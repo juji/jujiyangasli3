@@ -1,21 +1,21 @@
 import { ReactNode } from 'react'
 import styles from './toggle.module.scss'
+import Link from 'next/link'
 
-export default function Toggle({ label, toggled, onClick }:{
+export default function Toggle({ label, toggled, href }:{
   label: ReactNode
   toggled: boolean
-  onClick: (toggled: boolean) => void
+  href: string
+  // onClick: (toggled: boolean) => void
 }){
 
-    const callback = () => {
-      onClick(!toggled)
-    }
-
     return (
-        <label className={styles.toggleLabel}>
-            <input type="checkbox" defaultChecked={toggled} onClick={callback} />
-            <span />
-            <strong>{label}</strong>
-        </label>
+      <label className={styles.toggleLabel}>
+        <Link href={href} className='noline'>
+          <input type="checkbox" checked={toggled} readOnly={true} />
+          <span />
+          <strong>{label}</strong>
+        </Link>
+      </label>
     )
 }

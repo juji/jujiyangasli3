@@ -62,6 +62,10 @@ a:hover:after {
   transform: scaleX(1);
 }
 
+a.noline:hover:after {
+  transform: scaleX(0);
+}
+
 .page{
   position: relative;
   z-index: 1;

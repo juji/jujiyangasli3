@@ -3,13 +3,15 @@ import style from './works.module.scss'
 import workData from './works'
 import WorkTile from './WorkTile'
 import Toggle from '@/components/utils/Toggle'
+import { useRouter } from 'next/router'
 
 export default function Works(){
 
-    const [ showZombies, setShowZombies ] = useState(false)
-    const zombieLabel = useMemo(() => {
-        return showZombies?<>Zombies&nbsp;Shown</> : <>Show&nbsp;Zombies</>
-    },[ showZombies ])
+    const router = useRouter()
+    // const showZombies = router.query?.showzombies === '1'
+    // const zombieLabel = router.query?.showzombies === '1' ? 
+    //     <>Zombies&nbsp;Shown</> :
+    //     <>Show&nbsp;Zombies</>
 
     const works = useMemo(() => {
         return workData.filter(v => !v.zombie)
@@ -25,8 +27,12 @@ export default function Works(){
         <div className={style.top}>
             <p className={`${style.par}`}>My works -- that i remember ;)</p>
             <div className={style.toggle}>
-                <Toggle onClick={setShowZombies} 
-                    toggled={showZombies} label={zombieLabel} />
+                <Toggle 
+                    href={router.query?.showzombies === '1' ? '/works' : '/works?showzombies=1'} 
+                    toggled={router.query?.showzombies === '1'} 
+                    label={router.query?.showzombies === '1' ? 
+                    <>Zombies&nbsp;Shown</> :
+                    <>Show&nbsp;Zombies</>} />
             </div>
         </div>
 
@@ -39,7 +45,7 @@ export default function Works(){
                 workId={v.id}
                 lazyLoad={i>=3}
             />)}
-            { showZombies ? zombies.map((v,i) => <WorkTile 
+            { router.query?.showzombies === '1' ? zombies.map((v,i) => <WorkTile 
                 className={`${style.workTile} ${style.zombie} ${style[`workTile${i}`]}`}
                 key={`work_${v.id}`}
                 {...v}

@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import style from './workTile.module.scss'
-import Loader from '@/components/utils/Loader'
+// import Loader from '@/components/utils/Loader'
 import Link from 'next/link'
 
 interface WorkImage {
@@ -24,10 +24,10 @@ export default function WorkTile(props: WorkTileInterface){
 
     const { id, workId, images, title, className, lazyLoad } = props
     
-    const [ loaded, setLoaded ] = useState(lazyLoad ? false: true)
-    const onLoad = () => {
-        setLoaded(true)
-    }
+    // const [ loaded, setLoaded ] = useState(lazyLoad ? false: true)
+    // const onLoad = () => {
+    //     setLoaded(true)
+    // }
 
     const preventContextMenu = (e: any) => {
         e.preventDefault && e.preventDefault();
@@ -39,13 +39,16 @@ export default function WorkTile(props: WorkTileInterface){
     // https://www.codingwithjesse.com/blog/image-onload-isnt-being-called/
     return <div id={id} 
         onContextMenu={preventContextMenu}
-        className={`${loaded?style.loaded:''} ${className} ${style.workTile}`}>
+        className={`${style.loaded} ${className} ${style.workTile}`}>
         <img 
-            onLoad={onLoad}
-            ref={r => { if(r) r.src = images[0].thumbnail }}
+            // onLoad={onLoad}
+            src={images[0].thumbnail}
+            // ref={r => { if(r) r.src = images[0].thumbnail }}
             alt={title} 
-            {...(lazyLoad ? {loading:'lazy'}:{})} />
+            loading="lazy"
+            // {...(lazyLoad ? {loading:'lazy'}:{})} 
+            />
         <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
-        <Loader className={style.loader} />
+        {/* <Loader className={style.loader} /> */}
     </div>
 }
