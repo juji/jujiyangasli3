@@ -58,10 +58,11 @@ export default function NojsSlider({ slides, openZoomer }:{
   },[])
 
   return <div className={styles.sliderContainer}>
-    <div className={styles.slider}>
-      <div className={styles.slides} onTouchStart={cancelTimer}>
+    <div className={`${styles.slider} ${slides.length === 1 ? styles.slideZero : ''}`}>
+      <div className={`${styles.slides}`} onTouchStart={cancelTimer}>
         {slides.map((v,i) => <div key={`slide${i}`} 
-          id={`slide${i}`} className={styles.slide}>
+          id={`slide${i}`} 
+          className={`${styles.slide}`}>
             <Loader className={styles.loader} />
             <button onClick={openZoomer({src: v.url, alt: v.title})}>
               <img 

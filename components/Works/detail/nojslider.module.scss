@@ -138,6 +138,13 @@
       opacity: 0.2;
     }
 
+    &.slideZero a.slidePrev,
+    &.slideZero a.slideNext,
+    &.slideZero::before,
+    &.slideZero::after{
+      display: none;
+    }
+
   }
 
 }
