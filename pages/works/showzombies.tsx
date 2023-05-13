@@ -2,6 +2,6 @@ import Works from '@/components/Works'
 
 export default function Home() {
 
-  return <Works />
+  return <Works showAll={true} />
 
 }

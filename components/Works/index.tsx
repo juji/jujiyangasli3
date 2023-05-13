@@ -3,15 +3,14 @@ import style from './works.module.scss'
 import workData from './works'
 import WorkTile from './WorkTile'
 import Toggle from '@/components/utils/Toggle'
-import { useRouter } from 'next/router'
 
-export default function Works(){
+export default function Works({ showAll }:{ showAll?: boolean }){
 
-    const router = useRouter()
-    // const showZombies = router.query?.showzombies === '1'
-    // const zombieLabel = router.query?.showzombies === '1' ? 
-    //     <>Zombies&nbsp;Shown</> :
-    //     <>Show&nbsp;Zombies</>
+    const [ showZombies, setShowZombies ] = useState(showAll||false)
+    const toggleClick = (e:any) => {
+        e.preventDefault()
+        setShowZombies(!showZombies)
+    }
 
     const works = useMemo(() => {
         return workData.filter(v => !v.zombie)
@@ -28,11 +27,12 @@ export default function Works(){
             <p className={`${style.par}`}>My works -- that i remember ;)</p>
             <div className={style.toggle}>
                 <Toggle 
-                    href={router.query?.showzombies === '1' ? '/works' : '/works?showzombies=1'} 
-                    toggled={router.query?.showzombies === '1'} 
-                    label={router.query?.showzombies === '1' ? 
-                    <>Zombies&nbsp;Shown</> :
-                    <>Show&nbsp;Zombies</>} />
+                    onClick={toggleClick}
+                    href={showAll || showZombies ? '/works' : '/works/showzombies'} 
+                    toggled={showAll|| showZombies || false} 
+                    label={showAll || showZombies ? 
+                        <>Zombies&nbsp;Shown</> :
+                        <>Show&nbsp;Zombies</>} />
             </div>
         </div>
 
@@ -45,7 +45,7 @@ export default function Works(){
                 workId={v.id}
                 lazyLoad={i>=3}
             />)}
-            { router.query?.showzombies === '1' ? zombies.map((v,i) => <WorkTile 
+            { showAll || showZombies ? zombies.map((v,i) => <WorkTile 
                 className={`${style.workTile} ${style.zombie} ${style[`workTile${i}`]}`}
                 key={`work_${v.id}`}
                 {...v}

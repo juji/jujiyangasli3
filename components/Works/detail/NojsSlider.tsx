@@ -1,5 +1,6 @@
-import styles from './nojslider.module.scss'
 import { useEffect, useRef } from 'react'
+import styles from './nojslider.module.scss'
+import Loader from '@/components/utils/Loader'
 
 interface Slide{
   url: string,
@@ -24,15 +25,13 @@ export default function NojsSlider({ slides, openZoomer }:{
       clearTimeout(slideShow.current.timer)
     
     const slideTo = num >= slides.length ? 0 : num
-    const timer = setTimeout(() => {
-        const elm = document.querySelector(`a[href='#slide${slideTo}']`) as HTMLAnchorElement
-        elm && elm.click()
-        setSlide(slideTo+1)
-    },delay||3000)
-
     slideShow.current = {
-      timer,
-      current: num
+      timer: setTimeout(() => {
+          const elm = document.querySelector(`a[href='#slide${slideTo}']`) as HTMLAnchorElement
+          elm && elm.click()
+          setSlide(slideTo+1)
+      },delay||3000),
+      current: slideTo
     }
   }
 
@@ -52,6 +51,10 @@ export default function NojsSlider({ slides, openZoomer }:{
 
   useEffect(() => {
     setSlide(0)
+    return () => {
+      if(slideShow.current?.timer)
+        clearTimeout(slideShow.current.timer)
+    }
   },[])
 
   return <div className={styles.sliderContainer}>
@@ -59,6 +62,7 @@ export default function NojsSlider({ slides, openZoomer }:{
       <div className={styles.slides} onTouchStart={cancelTimer}>
         {slides.map((v,i) => <div key={`slide${i}`} 
           id={`slide${i}`} className={styles.slide}>
+            <Loader className={styles.loader} />
             <button onClick={openZoomer({src: v.url, alt: v.title})}>
               <img 
                 loading="lazy"

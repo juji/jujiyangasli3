@@ -2,16 +2,18 @@ import { ReactNode } from 'react'
 import styles from './toggle.module.scss'
 import Link from 'next/link'
 
-export default function Toggle({ label, toggled, href }:{
+import type { MouseEvent } from 'react'
+
+export default function Toggle({ label, onClick, toggled, href }:{
   label: ReactNode
   toggled: boolean
   href: string
-  // onClick: (toggled: boolean) => void
+  onClick: (e:any) => void
 }){
 
     return (
       <label className={styles.toggleLabel}>
-        <Link href={href} className='noline'>
+        <Link onClick={onClick} href={href} className='noline'>
           <input type="checkbox" checked={toggled} readOnly={true} />
           <span />
           <strong>{label}</strong>

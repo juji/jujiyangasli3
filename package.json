@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "serve out/"
   },
   "dependencies": {
     "@types/node": "18.14.6",
@@ -25,5 +26,8 @@
     "sanitize.css": "^13.0.0",
     "sass": "^1.58.3",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
   }
 }
