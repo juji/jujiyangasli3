@@ -35,7 +35,7 @@ export default function TechCell(props: TechProps){
                     width={width}
                     height={height}
                     placeholder={'blur'}
-                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNUrAcAAMcAouVPGYoAAAAASUVORK5CYII='
+                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
                 />
             </div>
         </a>

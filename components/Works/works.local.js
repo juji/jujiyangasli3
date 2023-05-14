@@ -39,18 +39,18 @@ module.exports = [
     url: 'https://careers.bridestory.com',
     images: [
       {
-        thumbnail: 'https://drive.google.com/uc?id=15qckcmUzLnjrgVZYi3lIXjFS-7Dz5euj',
-        url: 'https://drive.google.com/uc?id=13uQAeOI7CoJ6ddGAjDbh2q69MGigi-A5',
+        thumbnail: '/images/bridestory-careers-700.webp',
+        url: '/images/bridestory-careers.webp',
         title: 'Home'
       },
       {
-        thumbnail: 'https://drive.google.com/uc?id=1wBdv68WKeVg57MMUmLRlQr7mmW4Fi-jZ',
-        url: 'https://drive.google.com/uc?id=1rXD4q6umersymHeyh_itgUKlTvRB-Y7z',
+        thumbnail: '/images/bridestory1-700.webp',
+        url: '/images/bridestory1.webp',
         title: 'Home full page'
       },
       {
-        thumbnail: 'https://drive.google.com/uc?id=12YCtjtpbJgeMEqP-vWxi40QwrOmmA57A',
-        url: 'https://drive.google.com/uc?id=1RP3e-3e4bXeq30Yz5GOypkXa6bb6x25P',
+        thumbnail: '/images/bridestory2-700.webp',
+        url: '/images/bridestory2.webp',
         title: 'Job Detail'
       }
     ]
