@@ -261,5 +261,4 @@ const tech = [
   ]
 ]
 
-
 module.exports = tech

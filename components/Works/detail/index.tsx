@@ -1,6 +1,6 @@
 import { ReactNode, useState, useRef } from 'react'
 import { useRouter } from 'next/router'
-import data from '../works'
+import data from '../works.local.js'
 import styles from './detail.module.scss'
 import Link from 'next/link'
 

@@ -1,6 +1,6 @@
 
 import style from './tech.module.scss'
-import data from './data'
+import data from './data.local.js'
 import TechCell from './TechCell'
 
 export default function Tech(){

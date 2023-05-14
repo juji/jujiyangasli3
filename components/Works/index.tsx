@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import style from './works.module.scss'
-import workData from './works'
+import workData from './works.local.js'
 import WorkTile from './WorkTile'
 import Toggle from '@/components/utils/Toggle'
 
