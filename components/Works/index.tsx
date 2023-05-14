@@ -3,6 +3,7 @@ import style from './works.module.scss'
 import workData from './works.local.js'
 import WorkTile from './WorkTile'
 import Toggle from '@/components/utils/Toggle'
+import version from '@/lib/version'
 
 export default function Works({ showAll }:{ showAll?: boolean }){
 
@@ -28,7 +29,7 @@ export default function Works({ showAll }:{ showAll?: boolean }){
             <div className={style.toggle}>
                 <Toggle 
                     onClick={toggleClick}
-                    href={showAll || showZombies ? '/works' : '/works/showzombies'} 
+                    href={showAll || showZombies ? `/works?v=${version}` : `/works/showzombies?v=${version}`} 
                     toggled={showAll|| showZombies || false} 
                     label={showAll || showZombies ? 
                         <>Zombies&nbsp;Shown</> :

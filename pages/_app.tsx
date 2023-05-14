@@ -9,6 +9,7 @@ import Menu from '@/components/layout/Menu'
 import Pendulum from '@/components/layout/Pendulum'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
+import version from '@/lib/version'
 
 import type { AppProps } from 'next/app'
 import { Open_Sans } from 'next/font/google'
@@ -31,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Script id="sw-register" strategy="afterInteractive">
     {`
         if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('/sw.js?v=2')
+        navigator.serviceWorker.register('/sw.js?v=${version}')
         }
     `}
     </Script>
