@@ -14,6 +14,13 @@ interface WorkDetailProps{
     children: ReactNode
 }
 
+interface ZoomerProps {
+    src: string
+    alt: string
+    width: number
+    height: number
+}
+
 export default function WorkDetail({ children }: WorkDetailProps){
 
     const { pathname } = useRouter()
@@ -22,8 +29,8 @@ export default function WorkDetail({ children }: WorkDetailProps){
         return data.find(v => v.id === workName.current)
     },[ data, pathname ])
 
-    const [ zoomer, setZoomer ] = useState<{ src: string, alt: string } | null>(null)
-    const openZoomer = (obj: { src: string, alt: string }) => () => setZoomer(obj)
+    const [ zoomer, setZoomer ] = useState<ZoomerProps | null>(null)
+    const openZoomer = (obj: ZoomerProps) => () => setZoomer(obj)
     const closeZoomer = () => setZoomer(null)
 
     return project ? <div className={`${styles.workDetail} page`}>

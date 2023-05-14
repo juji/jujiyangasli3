@@ -1,5 +1,5 @@
 import style from './techcell.module.scss'
-// import Image from 'next/image';
+import Image from 'next/image';
 
 interface TechProps {
     id: string,
@@ -22,21 +22,19 @@ export default function TechCell(props: TechProps){
         aria-label={title} 
         target="_blank" rel="noopener noreferrer">
             <div className={style.imageContainer}>
-                <img
+                {/* <img
                     src={image} 
                     alt={title} 
                     width={width}
                     height={height}
                     loading="lazy" 
-                />
-                {/* <Image 
+                /> */}
+                <Image 
                     src={image} 
                     alt={title} 
                     width={width}
                     height={height}
-                    placeholder={'blur'}
-                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
-                /> */}
+                />
             </div>
         </a>
 

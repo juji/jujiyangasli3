@@ -1,11 +1,16 @@
 import { useEffect, useRef } from 'react'
 import styles from './nojslider.module.scss'
 import Loader from '@/components/utils/Loader'
+import Image from 'next/image'
 
 interface Slide{
   url: string,
   title: string,
   thumbnail: string
+  dimension: {
+    thumb: { width: number, height: number }
+    image: { width: number, height: number }
+  }
 }
 
 interface SlideTime {
@@ -15,7 +20,7 @@ interface SlideTime {
 
 export default function NojsSlider({ slides, openZoomer }:{ 
   slides: Slide[]
-  openZoomer: (obj: { src: string, alt: string }) => () => void
+  openZoomer: (obj: { src: string, alt: string, width: number, height: number }) => () => void
 }) {
 
   const slideShow = useRef<SlideTime|null>(null)
@@ -64,13 +69,14 @@ export default function NojsSlider({ slides, openZoomer }:{
           id={`slide${i}`} 
           className={`${styles.slide}`}>
             <Loader className={styles.loader} />
-            <button onClick={openZoomer({src: v.url, alt: v.title})}>
-              <img 
-                loading="lazy"
-                srcSet={`${v.thumbnail} 700w, ${v.url}`}
+            <button onClick={openZoomer({ src: v.url, alt: v.title, ...v.dimension.image })}>
+              <Image 
+                // srcSet={`${v.thumbnail} 700w, ${v.url}`}
+                // sizes="(max-width: 700px) 700px"
                 src={v.url}
-                sizes="(max-width: 700px) 700px"
                 alt={v.title} 
+                width={v.dimension.image.width}
+                height={v.dimension.image.height}
               />
             </button>
           <a className={`${styles.slidePrev} noline`}

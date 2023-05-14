@@ -2,6 +2,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useState } from 'react'
 import styles from './zoomer.module.scss'
 import Loader from "@/components/utils/Loader"
+import Image from 'next/image'
 
 import {
     FiMinusSquare,
@@ -13,9 +14,11 @@ import {
 
 
 interface ZoomerProps {
-    src: string,
-    onClose: () => void,
-    alt?: string,
+    src: string
+    onClose: () => void
+    alt: string
+    width: number
+    height: number
 }
 
 interface ControlProps {
@@ -38,7 +41,7 @@ const Controls = ({ zoomIn, zoomOut, resetTransform, onClose }: ControlProps) =>
     </div>
 );
 
-export default function Zoomer({ src, alt, onClose }: ZoomerProps){
+export default function Zoomer({ src, alt, onClose, width, height }: ZoomerProps){
 
     const [ closing, setClosing ] = useState(false)
     const onCloseLocal = () => {
@@ -60,10 +63,15 @@ export default function Zoomer({ src, alt, onClose }: ZoomerProps){
                 contentClass={styles.content}
             >
                 <Loader className={styles.loader} />
-                <img onLoad={() => setLoaded(true)} 
-                className={loaded?styles.loaded:''} 
-                ref={r => {if(r) r.src = src}}
-                alt={alt} />
+                <Image 
+                    // onLoad={() => setLoaded(true)} 
+                    className={styles.loaded} 
+                    src={src}
+                    width={width}
+                    height={height}
+                    // ref={r => {if(r) r.src = src}}
+                    alt={alt} 
+                />
             </TransformComponent>
             <Controls 
                 zoomIn={zoomIn} 

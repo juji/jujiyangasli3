@@ -3,11 +3,16 @@ import style from './workTile.module.scss'
 // import Loader from '@/components/utils/Loader'
 import Link from 'next/link'
 // import version from '@/lib/version'
+import Image from 'next/image'
 
 interface WorkImage {
     url: string
     title: string
     thumbnail: string
+    dimension: {
+        thumb: { width: number, height: number }
+        image: { width: number, height: number }
+    }
 }
 
 interface WorkTileInterface {
@@ -41,14 +46,12 @@ export default function WorkTile(props: WorkTileInterface){
     return <div id={id} 
         onContextMenu={preventContextMenu}
         className={`${style.loaded} ${className} ${style.workTile}`}>
-        <img 
-            // onLoad={onLoad}
+        <Image 
             src={images[0].thumbnail}
-            // ref={r => { if(r) r.src = images[0].thumbnail }}
+            width={images[0].dimension.thumb.width}
+            height={images[0].dimension.thumb.height}
             alt={title} 
-            loading="lazy"
-            // {...(lazyLoad ? {loading:'lazy'}:{})} 
-            />
+        />
         <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         {/* <Loader className={style.loader} /> */}
     </div>
