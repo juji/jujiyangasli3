@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Script id="sw-register" strategy="afterInteractive">
     {`
         if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('/sw.js?v=${version}')
+        navigator.serviceWorker.register('/sw2.js?v=${version}')
         }
     `}
     </Script>
