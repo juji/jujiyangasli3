@@ -1,4 +1,4 @@
-import { ReactNode, useState, useRef } from 'react'
+import { ReactNode, useState, useMemo, useRef } from 'react'
 import { useRouter } from 'next/router'
 import data from '../works.local.js'
 import styles from './detail.module.scss'
@@ -18,9 +18,9 @@ export default function WorkDetail({ children }: WorkDetailProps){
 
     const { pathname } = useRouter()
     const workName = useRef(pathname.split('/').pop())
-    const [ project ] = useState(
-        data.find(v => v.id === workName.current)
-    )
+    const project = useMemo(() => {
+        return data.find(v => v.id === workName.current)
+    },[ data, pathname ])
 
     const [ zoomer, setZoomer ] = useState<{ src: string, alt: string } | null>(null)
     const openZoomer = (obj: { src: string, alt: string }) => () => setZoomer(obj)
