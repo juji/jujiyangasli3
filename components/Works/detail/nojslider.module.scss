@@ -49,7 +49,7 @@
           position: absolute;
         }
 
-        button{
+        a.image{
           // opacity: 0.1;
           border: none;
           background: transparent;
@@ -80,7 +80,7 @@
 
     }
 
-    .slide a {
+    .slide a.arrow {
       background: none;
       // border: none;
       border: solid var(--blue);
@@ -89,7 +89,7 @@
       opacity: 0;
     }
 
-    .slide a:hover{
+    .slide a.arrow:hover{
       opacity: 1;
     }
     

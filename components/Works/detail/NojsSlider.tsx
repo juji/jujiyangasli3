@@ -62,6 +62,14 @@ export default function NojsSlider({ slides, openZoomer }:{
     }
   },[])
 
+  const zoom = (props:{ 
+    src: string, alt: string, 
+    width: number, height: number 
+  }) => (e:any) => {
+    e.preventDefault()
+    openZoomer(props)()
+  }
+
   return <div className={styles.sliderContainer}>
     <div className={`${styles.slider} ${slides.length === 1 ? styles.slideZero : ''}`}>
       <div className={`${styles.slides}`} onTouchStart={cancelTimer}>
@@ -69,7 +77,9 @@ export default function NojsSlider({ slides, openZoomer }:{
           id={`slide${i}`} 
           className={`${styles.slide}`}>
             <Loader className={styles.loader} />
-            <button onClick={openZoomer({ src: v.url, alt: v.title, ...v.dimension.image })}>
+            <a href={v.url} target="_blank"
+              onClick={zoom({ src: v.url, alt: v.title, ...v.dimension.image })}
+              className={`${styles.image} noline`}>
               <Image 
                 // srcSet={`${v.thumbnail} 700w, ${v.url}`}
                 // sizes="(max-width: 700px) 700px"
@@ -78,11 +88,11 @@ export default function NojsSlider({ slides, openZoomer }:{
                 width={v.dimension.image.width}
                 height={v.dimension.image.height}
               />
-            </button>
-          <a className={`${styles.slidePrev} noline`}
+            </a>
+          <a className={`${styles.slidePrev} ${styles.arrow} noline`}
             onClick={cancelTimer}
             href={`#slide${i === 0?slides.length-1:i-1}`} title="Previous"></a>
-          <a className={`${styles.slideNext} noline`} 
+          <a className={`${styles.slideNext} ${styles.arrow} noline`} 
             onClick={cancelTimer}
             href={`#slide${(i+1) === slides.length?0:i+1}`} title="Next"></a>
         </div>)}

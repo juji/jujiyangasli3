@@ -12,6 +12,7 @@ const Zoomer = dynamic(() => import('./Zoomer'), { ssr: false })
 
 interface WorkDetailProps{
     children: ReactNode
+    btz?: boolean
 }
 
 interface ZoomerProps {
@@ -21,12 +22,12 @@ interface ZoomerProps {
     height: number
 }
 
-export default function WorkDetail({ children }: WorkDetailProps){
+export default function WorkDetail({ children, btz }: WorkDetailProps){
 
-    const { pathname, query } = useRouter()
+    const { pathname } = useRouter()
     // query.btz // backToZombies
 
-    const workName = useRef(pathname.split('/').pop())
+    const workName = useRef(pathname.replace('/btz','').split('/').pop())
     const project = useMemo(() => {
         return data.find(v => v.id === workName.current)
     },[ data, pathname ])
@@ -45,7 +46,7 @@ export default function WorkDetail({ children }: WorkDetailProps){
 
             <div className={styles.topbar}>
                 <h1>{project.title}</h1>
-                <Link href={query.btz ? "/works/showzombies" : "/works"}>&times;</Link>
+                <Link href={btz ? "/works/showzombies" : "/works"}>&times;</Link>
             </div>
 
             <div className={styles.content}>

@@ -9,6 +9,7 @@ export default function Works({ showAll }:{ showAll?: boolean }){
 
     const [ showZombies, setShowZombies ] = useState(showAll||false)
     const toggleClick = (e:any) => {
+        if(showAll) return true;
         e.preventDefault()
         setShowZombies(!showZombies)
         if(showZombies)

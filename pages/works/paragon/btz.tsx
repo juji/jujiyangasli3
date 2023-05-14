@@ -1,9 +1,9 @@
 import WorkDetail from '@/components/Works/detail'
-
+import { NextPageContext } from 'next';
 
 export default function Paragon(){
 
-    return <WorkDetail>
+    return <WorkDetail btz={true}>
         <div>
             <p>The First website of my creation, that i like. Developed with PHP, MySql.</p>
             <p>Using CPanel as a server management tool.</p>
@@ -25,3 +25,4 @@ export default function Paragon(){
     </WorkDetail>
 
 }
+

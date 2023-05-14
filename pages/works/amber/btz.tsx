@@ -3,7 +3,7 @@ import WorkDetail from '@/components/Works/detail'
 
 export default function Amber(){
 
-    return <WorkDetail>
+    return <WorkDetail btz={true}>
         <div>
             <p>A platform to detect fake videos.</p>
             <p>Wait.. What!? that&lsquo;s a thing..</p>
