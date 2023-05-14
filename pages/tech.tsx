@@ -1,7 +1,13 @@
-import Tech from '@/components/Tech'
+import TechPage from '@/components/Tech'
+import Head from 'next/head'
 
-export default function Home() {
+export default function Tech() {
 
-  return <Tech />
+  return <>
+    <Head>
+      <title>Tech | Juji: Web Developer</title>
+    </Head>
+    <TechPage />
+  </>
           
 }

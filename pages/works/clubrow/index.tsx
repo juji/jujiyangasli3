@@ -1,10 +1,16 @@
 import WorkDetail from '@/components/Works/detail'
 import ClubrowContent from '@/components/Works/contents/Clubrow'
+import Head from 'next/head'
 
 export default function Clubrow(){
 
-    return <WorkDetail btz={false}>
-        <ClubrowContent />
-    </WorkDetail>
+    return <>
+        <Head>
+            <title>Clubrow | Juji: Web Developer</title>
+        </Head>
+        <WorkDetail btz={false}>
+            <ClubrowContent />
+        </WorkDetail>
+    </>
 
 }

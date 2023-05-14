@@ -1,10 +1,16 @@
 import WorkDetail from '@/components/Works/detail'
 import AmberContent from '@/components/Works/contents/Amber'
+import Head from 'next/head'
 
 export default function Amber(){
 
-    return <WorkDetail btz={true}>
-      <AmberContent />
-    </WorkDetail>
+    return <>
+      <Head>
+          <title>Amber | Juji: Web Developer</title>
+      </Head>
+      <WorkDetail btz={true}>
+        <AmberContent />
+      </WorkDetail>
+    </>
 
 }

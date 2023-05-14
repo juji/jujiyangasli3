@@ -1,11 +1,16 @@
 import WorkDetail from '@/components/Works/detail'
 import WheeleasyContent from '@/components/Works/contents/Wheeleasy'
+import Head from 'next/head'
 
 export default function Wheeleasy(){
 
-    return <WorkDetail btz={false}>
-        <WheeleasyContent />
-    </WorkDetail>
-
+    return <>
+        <Head>
+            <title>Wheeleasy | Juji: Web Developer</title>
+        </Head>
+        <WorkDetail btz={false}>
+            <WheeleasyContent />
+        </WorkDetail>
+    </>
 }
 

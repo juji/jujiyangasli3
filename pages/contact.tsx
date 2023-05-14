@@ -1,7 +1,9 @@
-import Contact from '@/components/Contact'
+import ContactPage from '@/components/Contact'
 
-export default function Home() {
+export default function Contact() {
 
-  return <Contact />
+  return <>
+    <ContactPage />
+  </>
           
 }

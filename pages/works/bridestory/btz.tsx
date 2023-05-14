@@ -1,10 +1,16 @@
 import WorkDetail from '@/components/Works/detail'
 import BridestoryContent from '@/components/Works/contents/Bridestory'
+import Head from 'next/head'
 
 export default function Bridestory(){
 
-    return <WorkDetail btz={true}>
-        <BridestoryContent />
-    </WorkDetail>
+    return <>
+        <Head>
+            <title>Bridestory | Juji: Web Developer</title>
+        </Head>
+        <WorkDetail btz={true}>
+            <BridestoryContent />
+        </WorkDetail>
+    </>
 
 }
