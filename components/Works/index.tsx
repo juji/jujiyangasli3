@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import style from './works.module.scss'
 import workData from './works.local.js'
 import WorkTile from './WorkTile'
@@ -11,7 +11,16 @@ export default function Works({ showAll }:{ showAll?: boolean }){
     const toggleClick = (e:any) => {
         e.preventDefault()
         setShowZombies(!showZombies)
+        if(showZombies)
+            localStorage.removeItem('juji-showzombies')
+        else localStorage.setItem('juji-showzombies','1')
     }
+
+    useEffect(() => {
+        if(typeof localStorage === 'undefined') return () => {}
+        const zombies = localStorage.getItem('juji-showzombies')
+        if(zombies && !showZombies) setShowZombies(true)
+    },[ typeof localStorage ])
 
     const works = useMemo(() => {
         return workData.filter(v => !v.zombie)
@@ -45,6 +54,7 @@ export default function Works({ showAll }:{ showAll?: boolean }){
                 id={style[v.id]}
                 workId={v.id}
                 lazyLoad={i>=3}
+                backToZombies={!!showAll}
             />)}
             { showAll || showZombies ? zombies.map((v,i) => <WorkTile 
                 className={`${style.workTile} ${style.zombie} ${style[`workTile${i}`]}`}
@@ -53,6 +63,7 @@ export default function Works({ showAll }:{ showAll?: boolean }){
                 id={style[v.id]}
                 workId={v.id}
                 lazyLoad={i>=0}
+                backToZombies={!!showAll}
             />) : null }
         </div>
     </div>

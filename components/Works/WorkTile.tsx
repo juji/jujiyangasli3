@@ -24,11 +24,12 @@ interface WorkTileInterface {
    url: string
    className: string
    lazyLoad?: boolean
+   backToZombies?: boolean
 }
 
 export default function WorkTile(props: WorkTileInterface){
 
-    const { id, workId, images, title, className, lazyLoad } = props
+    const { id, workId, images, title, className, lazyLoad, backToZombies } = props
     
     // const [ loaded, setLoaded ] = useState(lazyLoad ? false: true)
     // const onLoad = () => {
@@ -52,7 +53,7 @@ export default function WorkTile(props: WorkTileInterface){
             height={images[0].dimension.thumb.height}
             alt={title} 
         />
-        <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
+        <Link href={`/works/${workId}${backToZombies?'?btz=1':''}`} className={style.workTitle}>{title}</Link>
         {/* <Loader className={style.loader} /> */}
     </div>
 }
