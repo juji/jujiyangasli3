@@ -3,6 +3,7 @@ import styles from './header.module.scss'
 import Link from 'next/link'
 import isNotHome from '@/components/utils/isNotHome.interface'
 import { Source_Serif_Pro } from 'next/font/google'
+import version from '@/lib/version'
 
 const sourceSerif = Source_Serif_Pro({
     subsets: ['latin'],
@@ -16,7 +17,7 @@ export default function Header(props: isNotHome){
     return <div 
         className={`${sourceSerif.className} ${styles.header} ${isNotHome ? styles.intersected : ''}`} 
         id="header">
-        <Link href='/' className={styles.logo} id="logo">juji&nbsp;{'}'};</Link>
+        <Link href={`/?v=${version}`} className={styles.logo} id="logo">juji&nbsp;{'}'};</Link>
     </div>
 
 }
