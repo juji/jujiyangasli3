@@ -24,8 +24,8 @@ interface ZoomerProps {
 export default function WorkDetail({ children }: WorkDetailProps){
 
     const { pathname, query } = useRouter()
-    const btz = query.btz // backToZombies
-    
+    // query.btz // backToZombies
+
     const workName = useRef(pathname.split('/').pop())
     const project = useMemo(() => {
         return data.find(v => v.id === workName.current)
@@ -45,7 +45,7 @@ export default function WorkDetail({ children }: WorkDetailProps){
 
             <div className={styles.topbar}>
                 <h1>{project.title}</h1>
-                <Link href={btz? "/works/showzombies" : "/works"}>&times;</Link>
+                <Link href={query.btz ? "/works/showzombies" : "/works"}>&times;</Link>
             </div>
 
             <div className={styles.content}>
