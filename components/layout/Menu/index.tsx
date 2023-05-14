@@ -16,16 +16,16 @@ export default function Menu(props: isNotHome){
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isNotHome ? <div className="menuItem" id={styled.menuHome}>
-                    <Link aria-label="Go to homepage" href={`/`}><TiHome /></Link>
+                    <Link title="Homepage" aria-label="Go to homepage" href={`/`}><TiHome /></Link>
                 </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
-                    <Link className={router.pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
+                    <Link title="Works" className={router.pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
                 </div>
                 <div className="menuItem" id={styled.menuTech}>
-                    <Link className={router.pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
+                    <Link title="Technologies" className={router.pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
                 </div>
                 <div className="menuItem" id={styled.menuContact}>
-                    <Link className={router.pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
+                    <Link title="Contact" className={router.pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
                 </div>
             </div>
         </div>

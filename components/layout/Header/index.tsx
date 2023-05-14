@@ -17,7 +17,7 @@ export default function Header(props: isNotHome){
     return <div 
         className={`${sourceSerif.className} ${styles.header} ${isNotHome ? styles.intersected : ''}`} 
         id="header">
-        <Link href={`/`} className={styles.logo} id="logo">juji&nbsp;{'}'};</Link>
+        <Link title="Homepage" href={`/`} className={styles.logo} id="logo">juji&nbsp;{'}'};</Link>
     </div>
 
 }

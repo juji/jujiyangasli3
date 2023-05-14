@@ -13,7 +13,9 @@ export default function Home(){
     return <div className={`${styles.hello}`} id="hello">
         <h1 className={`${sourceCode.className} ${styles.hellobig}`}>Hello,</h1>
         <h2 className={styles.p1}>My name is <b>Tri Rahmat Gunadi</b>,</h2>
-        <h2 className={styles.p2}>but people call me <a rel='noreferrer noopener'
+        <h2 className={styles.p2}>but people call me <a 
+            title="Github Link"
+            rel='noreferrer noopener'
             target="_blank"
             href='https://github.com/juji'
             className={styles.juji}>juji</a>.</h2>
