@@ -51,8 +51,6 @@ export default function Zoomer({ src, alt, onClose, width, height }: ZoomerProps
         },900)
     }
 
-    const [ loaded, setLoaded ] = useState(false)
-
   return (<div className={`${styles.zoomer} ${closing?styles.out:''}`}>
     <TransformWrapper
         centerOnInit={true}
@@ -64,12 +62,10 @@ export default function Zoomer({ src, alt, onClose, width, height }: ZoomerProps
             >
                 <Loader className={styles.loader} />
                 <img 
-                    // onLoad={() => setLoaded(true)} 
                     className={styles.loaded} 
                     src={src}
                     width={width}
                     height={height}
-                    // ref={r => {if(r) r.src = src}}
                     alt={alt} 
                 />
             </TransformComponent>
