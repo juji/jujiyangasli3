@@ -2,7 +2,7 @@
 import style from './workTile.module.scss'
 // import Loader from '@/components/utils/Loader'
 import Link from 'next/link'
-import version from '@/lib/version'
+// import version from '@/lib/version'
 
 interface WorkImage {
     url: string
@@ -49,7 +49,7 @@ export default function WorkTile(props: WorkTileInterface){
             loading="lazy"
             // {...(lazyLoad ? {loading:'lazy'}:{})} 
             />
-        <Link href={`/works/${workId}?v=${version}`} className={style.workTitle}>{title}</Link>
+        <Link href={`/works/${workId}`} className={style.workTitle}>{title}</Link>
         {/* <Loader className={style.loader} /> */}
     </div>
 }
