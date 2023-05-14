@@ -25,7 +25,7 @@ export default function Works({ showAll }:{ showAll?: boolean }){
         
         <h1 className={`${style.h1}`}>Works</h1>
         <div className={style.top}>
-            <p className={`${style.par}`}>My works -- that i remember ;)</p>
+            <p className={`${style.par}`}>My works - that i remember ;)</p>
             <div className={style.toggle}>
                 <Toggle 
                     onClick={toggleClick}
