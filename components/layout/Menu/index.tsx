@@ -29,17 +29,20 @@ export default function Menu({
                 <div className="menuItem" id={styled.menuWorks}>
                     <Link 
                         // prefetch={false} 
-                        title="Works" className={pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
+                        title="Works" className={pathname === '/works'?styled.active:''} 
+                        href={`/works`}>works</Link>
                 </div>
                 <div className="menuItem" id={styled.menuTech}>
                     <Link 
                         // prefetch={false} 
-                        title="Technologies" className={pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
+                        title="Technologies" className={pathname === '/tech'?styled.active:''} 
+                        href={`/tech`}>tech</Link>
                 </div>
                 <div className="menuItem" id={styled.menuContact}>
                     <Link 
                         // prefetch={false} 
-                        title="Contact" className={pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
+                        title="Contact" className={pathname === '/contact'?styled.active:''} 
+                        href={`/contact`}>contact</Link>
                 </div>
             </div>
         </div>
