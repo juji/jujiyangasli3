@@ -25,7 +25,7 @@ export default function NojsSlider({ slides, openZoomer }:{
 
   const slideShow = useRef<SlideTime|null>(null)
   const setSlide = (num:number, delay?:number) => {
-    if(slides.length == 1) return;
+    if(slides.length === 1) return;
     if(slideShow.current && slideShow.current.timer) 
       clearTimeout(slideShow.current.timer)
     
@@ -55,7 +55,7 @@ export default function NojsSlider({ slides, openZoomer }:{
   }
 
   useEffect(() => {
-    setSlide(0)
+    setSlide(0) // so, the first image will have a long start
     return () => {
       if(slideShow.current?.timer)
         clearTimeout(slideShow.current.timer)
