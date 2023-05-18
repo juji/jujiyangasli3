@@ -22,16 +22,16 @@ export default function Menu({
         <div className={styled.menuContainer}>
             <div className={styled.grid}>
                 {isNotHome ? <div className="menuItem" id={styled.menuHome}>
-                    <Link title="Homepage" aria-label="Go to homepage" href={`/`}><TiHome /></Link>
+                    <Link prefetch={false} title="Homepage" aria-label="Go to homepage" href={`/`}><TiHome /></Link>
                 </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
-                    <Link title="Works" className={pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
+                    <Link prefetch={false} title="Works" className={pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
                 </div>
                 <div className="menuItem" id={styled.menuTech}>
-                    <Link title="Technologies" className={pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
+                    <Link prefetch={false} title="Technologies" className={pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
                 </div>
                 <div className="menuItem" id={styled.menuContact}>
-                    <Link title="Contact" className={pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
+                    <Link prefetch={false} title="Contact" className={pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
                 </div>
             </div>
         </div>
