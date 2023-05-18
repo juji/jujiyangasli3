@@ -53,7 +53,8 @@ export default function WorkTile(props: WorkTileInterface){
             height={images[0].dimension.thumb.height}
             alt={title} 
         />
-        <Link prefetch={false} 
+        <Link 
+            // prefetch={false} 
             href={`/works/${workId}${backToZombies?'/btz':''}`} 
             className={style.workTitle}>{title}</Link>
         {/* <Loader className={style.loader} /> */}
