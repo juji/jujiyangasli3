@@ -1,8 +1,9 @@
+'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
-import isNotHome from '@/components/utils/isNotHome.interface'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 interface PendulumImage {
     src: string, 
@@ -10,15 +11,17 @@ interface PendulumImage {
     height: number
 }
 
-export default function Pendulum(props: isNotHome){
+export default function Pendulum(){
 
-    const { isNotHome } = props
-    const router = useRouter()
+    const pathname = usePathname()
+    const isNotHome = pathname !== '/'
 
     const [ img, setImage ] = useState<PendulumImage | null>(null)
     const [ started, setStarted ] = useState<number | null>(null)
     const timeout = useRef<ReturnType<typeof setTimeout> | null>()
     const startTime = useRef<number | null>()
+
+    console.log(started)
 
     // handle resize event
     useEffect(() => {
@@ -42,8 +45,8 @@ export default function Pendulum(props: isNotHome){
     // delay draw start
     useEffect(() => {
 
-        if(router.pathname.match('/work')) return () => {};
-        if(router.pathname.match('/tech')) return () => {};
+        if(pathname.match('/work')) return () => {};
+        if(pathname.match('/tech')) return () => {};
 
         // first time, start immediately
         if(!started && !timeout.current) {
@@ -62,7 +65,7 @@ export default function Pendulum(props: isNotHome){
             },500)
 
         }
-    },[ started, router.pathname ])
+    },[ started, pathname ])
 
     return <div className={styles.pendulum} id="pendulum">
 

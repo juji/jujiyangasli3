@@ -1,5 +1,7 @@
+'use client';
+
 import { ReactNode, useState, useMemo, useRef } from 'react'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import data from '../works.local.js'
 import styles from './detail.module.scss'
 import Link from 'next/link'
@@ -9,7 +11,6 @@ import dynamic from 'next/dynamic'
 import NojsSlider from './NojsSlider'
 
 const Zoomer = dynamic(() => import('./Zoomer'), { ssr: false })
-
 
 interface WorkDetailProps{
     children: ReactNode
@@ -25,7 +26,7 @@ interface ZoomerProps {
 
 export default function WorkDetail({ children, btz }: WorkDetailProps){
 
-    const { pathname } = useRouter()
+    const pathname = usePathname()
     // query.btz // backToZombies
 
     const workName = useRef(pathname.replace('/btz','').split('/').pop())

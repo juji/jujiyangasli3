@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useMemo, useEffect } from 'react'
 import style from './works.module.scss'
 import workData from './works.local.js'

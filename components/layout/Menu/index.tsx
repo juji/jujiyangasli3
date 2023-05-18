@@ -1,16 +1,22 @@
-
+'use client'
 
 import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
 import isNotHome from '@/components/utils/isNotHome.interface'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 // import version from '@/lib/version'
 
-export default function Menu(props: isNotHome){
+export default function Menu({ 
+    bottomPlacement, 
+    className 
+}:{
+    bottomPlacement?: Boolean
+    className?: string
+}){
 
-    const { isNotHome, bottomPlacement, className } = props;
-    const router = useRouter()
+    const pathname = usePathname()
+    const isNotHome = pathname !== '/'
         
     return <nav className={`${className} ${styled.menu} ${bottomPlacement?styled.bottomPlacement:styled.normalPlacement} ${isNotHome ? styled.isNotHome : ''}`} id="menu">
         <div className={styled.menuContainer}>
@@ -19,13 +25,13 @@ export default function Menu(props: isNotHome){
                     <Link title="Homepage" aria-label="Go to homepage" href={`/`}><TiHome /></Link>
                 </div> : null}
                 <div className="menuItem" id={styled.menuWorks}>
-                    <Link title="Works" className={router.pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
+                    <Link title="Works" className={pathname === '/works'?styled.active:''} href={`/works`}>works</Link>
                 </div>
                 <div className="menuItem" id={styled.menuTech}>
-                    <Link title="Technologies" className={router.pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
+                    <Link title="Technologies" className={pathname === '/tech'?styled.active:''} href={`/tech`}>tech</Link>
                 </div>
                 <div className="menuItem" id={styled.menuContact}>
-                    <Link title="Contact" className={router.pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
+                    <Link title="Contact" className={pathname === '/contact'?styled.active:''} href={`/contact`}>contact</Link>
                 </div>
             </div>
         </div>
