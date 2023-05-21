@@ -18,7 +18,8 @@ const DoublePendulum = function(
 
     this.width = maxWidth ? Math.min(window.innerWidth, maxWidth) : window.innerWidth
     this.height = window.innerHeight + 60
-    this.isSafari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1
+    // this.isSafari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1
+    this.isIphone = /ipad|iphone|ipod/.test(navigator.userAgent.toLowerCase())
 
     this.callback = callback
     this.canvas = canvas;
@@ -76,7 +77,7 @@ const DoublePendulum = function(
     // this.context.shadowBlur = 2;
     // this.context.shadowColor = "#242424";
     this.context.lineWidth = 0.5;
-    this.context.strokeStyle = this.isSafari ? '#242424' : '#424242';
+    this.context.strokeStyle = this.isIphone ? '#242424' : '#424242';
   
     this.draw();
   
