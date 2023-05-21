@@ -77,6 +77,7 @@ const DoublePendulum = function(
     // this.context.shadowBlur = 2;
     // this.context.shadowColor = "#242424";
     this.context.lineWidth = 0.5;
+    // console.log('this.isIphone', this.isIphone)
     this.context.strokeStyle = this.isIphone ? '#242424' : '#424242';
   
     this.draw();
