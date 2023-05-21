@@ -21,7 +21,7 @@ export default function Pendulum(){
     const timeout = useRef<ReturnType<typeof setTimeout> | null>()
     const startTime = useRef<number | null>()
 
-    console.log(started)
+    // console.log(started)
 
     // handle resize event
     useEffect(() => {

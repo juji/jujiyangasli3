@@ -20,6 +20,13 @@
         transition: background-color 300ms;
     }
 
+    /* only for safari */
+    // @media screen { @media (min-width: 0px) {
+    //     .bg{
+    //         background-color: var(--transparentBg);
+    //     }
+    // } }
+
     .bg.on{
         background-color: var(--transparentBg);
     }
