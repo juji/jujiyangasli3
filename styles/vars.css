@@ -4,7 +4,6 @@
   --transparentBg: rgba(17,17,17,0.7);
   --text: #f0f0f0;
   --blue: #74b9ff;
-  --menuTop: 476px;
   --maxWidth: 1800px;
-  --menuTopIntersected: calc(100% - 66px)
+  --mainPadding: 21px;
 }

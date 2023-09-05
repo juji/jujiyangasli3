@@ -4,13 +4,13 @@ import '@/styles/globals.css'
 
 import type { ReactNode } from 'react'
 import Header from '@/components/layout/Header'
-import Menu from '@/components/layout/Menu'
+// import Menu from '@/components/layout/Menu'
 import Pendulum from '@/components/layout/Pendulum'
 import Script from 'next/script'
 import { Metadata } from 'next';
 import openGraph from '@/components/utils/tags/openGraph'
 import twitter from '@/components/utils/tags/twitter'
- 
+
 // import type { AppProps } from 'next/app'
 import { Open_Sans } from 'next/font/google'
 
@@ -51,9 +51,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       `}
       </Script>
     <body>
-      <Header />
+      <Header menuClassName={openSans.className} />
       <Pendulum />
-      <Menu className={openSans.className} bottomPlacement={true} />
+      {/* <Menu className={openSans.className} topPlacement={true} /> */}
       <main className={openSans.className}>
         <div id="content">
           { children }

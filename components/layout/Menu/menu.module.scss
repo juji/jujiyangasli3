@@ -10,15 +10,18 @@
        margin-bottom: 34px; 
     }
     
-    &.bottomPlacement{
-        padding-left: 55px;
+    &.topPlacement{
         z-index: 3;
-        position:fixed;
-        top: auto;
-        left:0;
-        bottom: -100px;
-        transition: bottom 200ms;
-        background-color: rgba(0,0,0,0.9);
+        // position:fixed;
+        // margin-right: var(--mainPadding);
+        // top: -100px;
+        // right:0;
+        // background-color: rgba(0,0,0,0.9);
+        // transition: top 200ms;
+        text-align: right;
+        width: auto;
+        // border: 1px solid red;
+        display:none;
     }
 
     .menuContainer{
@@ -40,7 +43,7 @@
         transform: scaleX(1) !important;
     }
 
-    #menuHome{
+    .menuHome{
         animation-name: fadeIn;
         animation-duration: 350ms;
         animation-delay: 400ms;
@@ -48,30 +51,34 @@
         padding-right: 8px;
     }
 
-    #menuWorks{
+    .menuWorks{
         animation-name: slideIn;
         animation-duration: 350ms;
         animation-delay: 200ms;
         animation-fill-mode: both;
     }
 
-    #menuTech{
+    .menuTech{
         animation-name: slideIn;
         animation-duration: 350ms;
         animation-delay: 400ms;
         animation-fill-mode: both;
     }
 
-    #menuContact{
+    .menuContact{
         animation-name: slideIn;
         animation-duration: 350ms;
         animation-delay: 600ms;
         animation-fill-mode: both;
     }
 
-    &.isNotHome.bottomPlacement{
-        bottom: 0;
+    @media screen and (min-width: 500px) {
+        &.isNotHome.topPlacement{
+            // top: 21px;
+            display:inline-block;
+        }
     }
+
 
     &.isNotHome.normalPlacement{
         display:none

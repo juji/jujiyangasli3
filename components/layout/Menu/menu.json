@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Works",
+    "url": "/works",
+    "text": "works",
+    "style": "menuWorks"
+  },
+  {
+    "title": "Technologies",
+    "url": "/tech",
+    "text": "tech",
+    "style": "menuTech"
+  },
+  {
+    "title": "Contact",
+    "url": "/contact",
+    "text": "contact",
+    "style": "menuContact"
+  }
+]

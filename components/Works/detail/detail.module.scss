@@ -90,7 +90,7 @@
 
         .topbar{
 
-            padding: 21px 55px;
+            padding: 21px var(--mainPadding);
             background-color: #000;
             display: flex;
             justify-content: space-between;
@@ -149,7 +149,7 @@
                 left:0;
                 height: 100%;
                 width: 100%;
-                padding: 55px;
+                padding: var(--mainPadding);
                 overflow-y: auto;
                 line-height: 1.63em;
 

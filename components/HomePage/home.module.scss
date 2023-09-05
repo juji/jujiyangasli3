@@ -4,7 +4,7 @@
 .hello{
 
     margin-top: 35px;
-    margin-left: 55px;
+    margin-left: var(--mainPadding);
 
     transition: opacity 300ms;
     transition-timing-function: ease-out;
