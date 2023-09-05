@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
 import { usePathname } from 'next/navigation'
@@ -67,6 +67,24 @@ export default function Pendulum(){
         }
     },[ started, pathname ])
 
+    const width = useMemo(() => {
+
+        return typeof window !== 'undefined' ? Math.min(
+            window.innerWidth,
+            Number(
+                getComputedStyle(
+                    document.documentElement
+                ).getPropertyValue('--maxWidth').replace(/px/,'')
+            )
+        ) : null
+
+    },[ typeof window !== 'undefined' && window.innerWidth ])
+
+    console.log(
+        'canvas width',
+        width
+    )
+
     return <div className={styles.pendulum} id="pendulum">
 
         <div className={`${styles.bg} ${isNotHome?styles.on:''}`}></div>
@@ -76,14 +94,14 @@ export default function Pendulum(){
                 src={img.src} 
                 height={`${img.height}px`} 
                 width={`${img.width}px`} 
-                alt="pendulum" /> : started ? <canvas 
+                alt="pendulum" /> : started ? (width !== null ? <canvas 
                 ref={canvasRef => PendulumFn(
                     canvasRef, 
                     started,
-                    0, //maxWidth,
+                    width, //maxWidth,
                     (image: PendulumImage, ts: number) => {
                         if(ts === startTime.current) setImage(image)
-                    })}></canvas> : null }
+                    })}></canvas> : null) : null }
         </div>
 
         

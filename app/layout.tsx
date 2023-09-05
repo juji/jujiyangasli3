@@ -51,15 +51,16 @@ export default function Layout({ children }: { children: ReactNode }) {
       `}
       </Script> */}
     <body>
-      <Header menuClassName={openSans.className} />
       <Pendulum />
-
+      <div className='centered'>
+      <Header menuClassName={openSans.className} />
       <main className={openSans.className}>
         <div id="content">
           { children }
         </div>
       </main>
       <Footer className={openSans.className} />
+      </div>
     </body>
   </html>
 }

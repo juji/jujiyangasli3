@@ -4,20 +4,25 @@
 
     height: calc(100lvh + 60px);
     width: 100%;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
     z-index: 0;
     overflow: hidden;
     position: fixed;
     top: -30px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     .bg{
         position: absolute;
         top:0;
-        left:0;
+        left:50%;
         width: 100%;
+        max-width: var(--maxWidth);
         height: 100%;
         z-index: 1;
         transition: background-color 300ms;
+        transform: translateX(-50%);
     }
 
     /* only for safari */

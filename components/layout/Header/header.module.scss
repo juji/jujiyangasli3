@@ -2,7 +2,7 @@
 
 .header{
 
-    max-width: calc(var(--maxWidth) - (var(--mainPadding) *2));
+    max-width: var(--maxWidth);
 
     position: relative;
     z-index: 3;

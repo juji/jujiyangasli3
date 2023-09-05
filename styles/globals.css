@@ -46,9 +46,22 @@ body{
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg);
 }
 
-body > main{
+.centered{
+  width: 100%;
+  max-width: var(--maxWidth);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 233px -21px rgba(20,98,255,0.34);
+
+}
+
+.centered main{
   flex: 1 1 auto;
 }
 
