@@ -19,9 +19,8 @@ export default function MenuMobile({ className }:{ className: string }){
 
   useEffect(() => {
     if(
-      typeof document === 'undefined' ||
-      typeof document.body === 'undefined'
-    )return () => {}
+      typeof document?.body === 'undefined'
+    ) return () => {}
 
     if(open) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = 'initial'
