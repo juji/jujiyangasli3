@@ -30,7 +30,7 @@ export default function MenuMobile({ className }:{ className: string }){
 
   return <nav className={`${styled.menuMobile} ${className} ${open?styled.menuOpen:''}`}>
     <div className={styled.menuToggle}>
-      <button name="menu" className={`${styled.toggleButton}`} onClick={() => setOpen(!open)}>
+      <button title="menu" className={`${styled.toggleButton}`} onClick={() => setOpen(!open)}>
         <span className={`${styled.openLine} ${styled.openTop}`}></span>
         <span className={`${styled.openLine} ${styled.openMiddle}`}></span>
         <span className={`${styled.openLine} ${styled.openBottom}`}></span>
