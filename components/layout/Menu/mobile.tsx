@@ -10,7 +10,7 @@ import menuItems from './menu.json'
 export default function MenuMobile({ className }:{ className: string }){
 
   const pathname = usePathname()
-  const isNotHome = pathname !== '/'
+  // const isNotHome = pathname !== '/'
   const [ open, setOpen ] = useState(false)
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function MenuMobile({ className }:{ className: string }){
         {menuItems.map(menu => (
             <div key={`menu-${menu.title}`} className={`${styled.menuItem} ${styled[menu.style]}`} >
               <Link 
-                  // prefetch={false} 
+                  prefetch={false} 
                   title={menu.title} className={pathname === menu.url?styled.active:''} 
                   href={menu.url}>{menu.title}</Link>
             </div>

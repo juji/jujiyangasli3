@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <body>
       <Header menuClassName={openSans.className} />
       <Pendulum />
-      {/* <Menu className={openSans.className} topPlacement={true} /> */}
+
       <main className={openSans.className}>
         <div id="content">
           { children }

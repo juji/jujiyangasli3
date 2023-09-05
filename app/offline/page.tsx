@@ -2,8 +2,9 @@ const image = `data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUDBAQEAw
 
 export default function Offline () {
     return (
-      <div className="offline page">
-        <div><img src={image} alt="offline" /></div>
+      <div className="offline page" style={{maxWidth: '100%'}}>
+        <div style={{maxWidth: '100%'}}>
+          <img src={image} alt="offline" style={{maxWidth: '100%'}} /></div>
         <br />
         <p>You are offline :[</p>
       </div>
