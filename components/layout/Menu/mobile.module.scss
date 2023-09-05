@@ -41,21 +41,11 @@
         background: white;
         height: 3px;
         border-radius: 3px;
-
-        &.openTop{
-          transition: all 200ms;
-          transform-origin: center center;
-        }
+        transition: all 200ms;
+        transform-origin: center center;
 
         &.openMiddle{
           margin: 5px 0;
-          transition: all 200ms;
-          transform-origin: center center;
-        }
-
-        &.openBottom{
-          transition: all 200ms;
-          transform-origin: center center;
         }
       }
     }
@@ -89,13 +79,13 @@
 
       h4{
         margin-top: calc(34px/2);
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         font-size: 1.5rem;
         opacity: 0;
       }
 
       .menuItem{
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         opacity: 0;
         a.active:after{
           transform: scaleX(1) !important;
@@ -116,7 +106,7 @@
 
       .menuList{
         right: 0px;
-        transition: right 200ms 200ms;
+        transition: right 200ms 500ms;
 
         h4{
           animation-name: fadeIn;
