@@ -17,6 +17,16 @@ export default function MenuMobile({ className }:{ className: string }){
     setOpen(false)
   },[ pathname ])
 
+  useEffect(() => {
+    if(
+      typeof document === 'undefined' ||
+      typeof document.body === 'undefined'
+    )return () => {}
+
+    if(open) document.body.style.overflow = 'hidden'
+    else document.body.style.overflow = 'initial'
+
+  },[open])
 
 
   return <nav className={`${styled.menuMobile} ${className} ${open?styled.menuOpen:''}`}>
