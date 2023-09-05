@@ -3,10 +3,11 @@ import { useEffect, useRef } from 'react'
 export default function Intersection(){
 
     const done = useRef(false)
+    const hasWindow = typeof window !== 'undefined'
 
     useEffect(() => {
 
-        if(typeof window === 'undefined') return () => {}
+        if(!hasWindow) return () => {}
         if(done.current) return () => {}
 
         done.current = true
@@ -26,7 +27,7 @@ export default function Intersection(){
 
     
     
-    },[ typeof window === 'undefined' ])
+    },[ hasWindow ])
 
     return null
 

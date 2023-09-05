@@ -32,6 +32,8 @@ export default function WorkDetail({ children, btz }: WorkDetailProps){
     const workName = useRef(pathname.replace('/btz','').split('/').pop())
     const project = useMemo(() => {
         return data.find(v => v.id === workName.current)
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ data, pathname ])
 
     const [ zoomer, setZoomer ] = useState<ZoomerProps | null>(null)

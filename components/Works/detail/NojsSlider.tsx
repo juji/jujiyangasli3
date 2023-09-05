@@ -60,6 +60,7 @@ export default function NojsSlider({ slides, openZoomer }:{
       if(slideShow.current?.timer)
         clearTimeout(slideShow.current.timer)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const zoom = (props:{ 

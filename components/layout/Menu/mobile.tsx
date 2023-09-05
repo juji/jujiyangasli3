@@ -10,27 +10,24 @@ import menuItems from './menu.json'
 export default function MenuMobile({ className }:{ className: string }){
 
   const pathname = usePathname()
-  // const isNotHome = pathname !== '/'
   const [ open, setOpen ] = useState(false)
-
+  
   useEffect(() => {
     setOpen(false)
   },[ pathname ])
 
+  const withBody = typeof document !== 'undefined' && typeof document?.body !== 'undefined'
   useEffect(() => {
-    if(
-      typeof document?.body === 'undefined'
-    ) return () => {}
-
+    if(!withBody) return () => {}
     if(open) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = 'initial'
-
-  },[open])
+  },[withBody, open])
 
 
   return <nav className={`${styled.menuMobile} ${className} ${open?styled.menuOpen:''}`}>
     <div className={styled.menuToggle}>
-      <button title={open?"close menu":"open menu"} className={`${styled.toggleButton}`} onClick={() => setOpen(!open)}>
+      <button title={open?"close menu":"open menu"} 
+        className={`${styled.toggleButton}`} onClick={() => setOpen(!open)}>
         <span className={`${styled.openLine} ${styled.openTop}`}></span>
         <span className={`${styled.openLine} ${styled.openMiddle}`}></span>
         <span className={`${styled.openLine} ${styled.openBottom}`}></span>

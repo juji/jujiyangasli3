@@ -42,6 +42,7 @@ export default function Slider({ slides, openZoomer }: SlideImages) {
         <div ref={sliderRef} className={`keen-slider ${style.sliderContent}`}>
             {slides.map((v,i) => <div key={`gallery-${v.title}`} 
               className={`keen-slider__slide ${style.slide} ${imageloaded[i]?style.loaded:''}`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   loading="lazy"
                   onLoad={onImgLoad(i)}

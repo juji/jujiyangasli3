@@ -61,6 +61,7 @@ export default function Zoomer({ src, alt, onClose, width, height }: ZoomerProps
                 contentClass={styles.content}
             >
                 <Loader className={styles.loader} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                     className={styles.loaded} 
                     src={src}

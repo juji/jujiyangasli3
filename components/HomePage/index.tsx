@@ -33,7 +33,8 @@ export default function Home(){
         // @ts-ignore
         return () => ref({});
 
-    },[ typeof document ]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[ typeof document  === 'undefined' ]); // 
 
     return <div className={`${styles.hello}`} id="hello">
         <h1 className={`${sourceCode.className} ${styles.hellobig}`}>Hello,</h1>

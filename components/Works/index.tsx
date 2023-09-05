@@ -27,7 +27,9 @@ export default function Works({ showAll }:{ showAll?: boolean }){
         if(typeof localStorage === 'undefined') return () => {}
         const zombies = localStorage.getItem('juji-showzombies')
         if(zombies && !showZombies) setShowZombies(true)
-    },[ typeof localStorage ])
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[ typeof localStorage  === 'undefined', showZombies ])
 
     const works = useMemo(() => {
         return workData.filter(v => !v.zombie)

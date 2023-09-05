@@ -21,12 +21,14 @@ export default function Pendulum(){
     const timeout = useRef<ReturnType<typeof setTimeout> | null>()
     const startTime = useRef<number | null>()
 
+    const haveWindow = typeof window !== 'undefined'
+
     // console.log(started)
 
     // handle resize event
     useEffect(() => {
 
-        if(typeof window === 'undefined') return () => {};
+        if(!haveWindow) return () => {};
 
         const handleResize = () => {
             setImage(null)
@@ -39,7 +41,7 @@ export default function Pendulum(){
         }
 
 
-    },[ typeof window === 'undefined' ])
+    },[ haveWindow ])
 
 
     // delay draw start
@@ -67,10 +69,11 @@ export default function Pendulum(){
         }
     },[ started, pathname ])
 
+    const windowInnerWidth = haveWindow && window.innerWidth
     const width = useMemo(() => {
 
-        return typeof window !== 'undefined' ? Math.min(
-            window.innerWidth,
+        return haveWindow && windowInnerWidth ? Math.min(
+            windowInnerWidth,
             Number(
                 getComputedStyle(
                     document.documentElement
@@ -78,18 +81,19 @@ export default function Pendulum(){
             )
         ) : null
 
-    },[ typeof window !== 'undefined' && window.innerWidth ])
+    },[ haveWindow, windowInnerWidth ])
 
-    console.log(
-        'canvas width',
-        width
-    )
+    // console.log(
+    //     'canvas width',
+    //     width
+    // )
 
     return <div className={styles.pendulum} id="pendulum">
 
         <div className={`${styles.bg} ${isNotHome?styles.on:''}`}></div>
         
         <div className={styles.inside}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             { img ? <img 
                 src={img.src} 
                 height={`${img.height}px`} 
