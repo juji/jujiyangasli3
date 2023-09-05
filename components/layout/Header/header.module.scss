@@ -39,11 +39,18 @@
         line-height: 1.5;
         color: var(--text);
         text-decoration: none;
-        font-size: 4.236em;
+        // font-size: 4.236rem;
+        font-size: 3.236rem;
+    }
+
+    @media screen and (min-width: 300px) {
+        .logo{
+            font-size: 4.236rem;
+        }
     }
 
     &.intersected .logo{
-        font-size: 3.236em;
+        font-size: 3.236rem;
     }
 
 }
