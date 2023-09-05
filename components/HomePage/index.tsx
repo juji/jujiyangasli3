@@ -1,5 +1,10 @@
+'use client'
+
 import styles from './home.module.scss'
 import Menu from '@/components/layout/Menu'
+import { useSwipeable } from 'react-swipeable';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation'
 
 import { Source_Code_Pro } from 'next/font/google'
 
@@ -9,6 +14,26 @@ const sourceCode = Source_Code_Pro({
 })
 
 export default function Home(){
+    const router = useRouter()
+
+    const { ref } = useSwipeable({
+        onSwipedUp: ({ dir }) => {
+            // console.log('swipe dir:', dir)
+            router.push('/works')
+        }
+    })
+    
+    useEffect(() => {
+        
+        if(typeof document === 'undefined') return;
+
+        // @ts-ignore
+        ref(document);
+        // Clean up swipeable event listeners
+        // @ts-ignore
+        return () => ref({});
+
+    },[ typeof document ]);
 
     return <div className={`${styles.hello}`} id="hello">
         <h1 className={`${sourceCode.className} ${styles.hellobig}`}>Hello,</h1>
