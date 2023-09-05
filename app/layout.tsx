@@ -43,13 +43,13 @@ const openSans = Open_Sans({
 export default function Layout({ children }: { children: ReactNode }) {
 
   return <html lang="en">
-      <Script id="sw-register" strategy="afterInteractive">
+      {/* <Script id="sw-register" strategy="afterInteractive">
       {`
           if (typeof navigator.serviceWorker !== 'undefined') {
           navigator.serviceWorker.register('/sw.js?v=5')
           }
       `}
-      </Script>
+      </Script> */}
     <body>
       <Header menuClassName={openSans.className} />
       <Pendulum />
