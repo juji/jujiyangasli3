@@ -9,6 +9,10 @@ import Toggle from '@/components/utils/Toggle'
 
 export default function Works({ showAll }:{ showAll?: boolean }){
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const [ showZombies, setShowZombies ] = useState(showAll||false)
     const toggleClick = (e:any) => {
         if(showAll) return true;
