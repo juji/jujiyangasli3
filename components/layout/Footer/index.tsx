@@ -12,7 +12,7 @@ export default function Footer({ className }:{ className: string }){
 
   return <footer className={`${className} ${styled.footer}`}>
     {isNotHome ? <FooterMenu className={styled.menu} /> : null}
-    <div>
+    <div className={styled.copy}>
       &copy; {new Date().getFullYear()} Tri Rahmat Gunadi (<Link 
         className={styled.mailToLink}
         target="_blank" href="mailto:him@jujiyangasli.com">him@jujiyangasli.com</Link>). 
