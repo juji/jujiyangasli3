@@ -22,12 +22,12 @@
 
     .toggleButton{
       border: 0px;
-      background: transparent;
+      background: rgba(0,0,0,0.2);
       margin: 0;
       padding:0;
 
       display: inline-block;
-      width: 21px;
+      width: 34px;
       height: 34px;
       // border: 1px solid red;
       cursor: pointer;
@@ -39,13 +39,24 @@
       .openLine{
         display: block;
         background: white;
-        height: 3px;
+        height: 5px;
         border-radius: 3px;
-        transition: all 200ms;
+        transition: all 200ms 300ms;
         transform-origin: center center;
+
+        &.openTop{
+          transform: rotate(0deg);
+          background: white;
+        }
 
         &.openMiddle{
           margin: 5px 0;
+        }
+
+        &.openBottom{
+          margin-top: 0px;
+          transform: rotate(0deg);
+          background: white;
         }
       }
     }
@@ -102,11 +113,11 @@
       height: 100%;
       opacity: 1;
       left: 0%;
-      transition: opacity 200ms 300ms;
+      transition: opacity 200ms 100ms;
 
       .menuList{
         right: 0px;
-        transition: right 200ms 500ms;
+        transition: right 200ms 300ms;
 
         h4{
           animation-name: fadeIn;
@@ -147,8 +158,8 @@
 
     .openLine{
       &.openTop{
-        transform: rotate(45deg);
-        background: red;
+        transform: rotate(45deg) !important;
+        background: red !important;
       }
 
       &.openMiddle{
@@ -158,9 +169,9 @@
       }
 
       &.openBottom{
-        margin-top: -8px;
-        transform: rotate(-45deg);
-        background: red;
+        margin-top: -10px !important;
+        transform: rotate(-45deg) !important;
+        background: red !important;
       }
     }
   }
