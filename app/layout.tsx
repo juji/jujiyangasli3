@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 
 import type { ReactNode } from 'react'
 import Header from '@/components/layout/Header'
-// import Menu from '@/components/layout/Menu'
+import Footer from '@/components/layout/Footer'
 import Pendulum from '@/components/layout/Pendulum'
 import Script from 'next/script'
 import { Metadata } from 'next';
@@ -59,6 +59,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           { children }
         </div>
       </main>
+      <Footer className={openSans.className} />
     </body>
   </html>
 }

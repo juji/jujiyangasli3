@@ -41,8 +41,15 @@ body,#_next{
 }
 
 body{
+  min-height: 100%;
   color: var(--text);
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main{
+  flex: 1 1 auto;
 }
 
 a{
@@ -84,7 +91,7 @@ a.noline:hover:after {
   
   padding-left: var(--mainPadding);
   padding-right: var(--mainPadding);
-  padding-bottom: 144px;
+  padding-bottom: 55px;
 }
 
 .page.error h1{

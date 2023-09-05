@@ -1,0 +1,40 @@
+
+
+.footer{
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  padding: 13px var(--mainPadding);
+  font-size: 0.8rem;
+  color: #575757;
+
+  a.mailToLink{
+    color: inherit;  
+
+    &:hover{
+      color: var(--blue);
+    }
+  }
+
+  .menu{
+    margin-top: 13px;
+    padding-top: 13px;
+    border-top: 1px dotted #222;
+    display: flex;
+  }
+
+  @media screen and (min-width: 780px) {
+    
+    display: flex;
+
+    .menu{
+      margin-top: 0px;
+      padding-top: 0px;
+      border-top: 0px;
+
+      border-left: 1px solid #333;
+      margin-left: 21px;
+      padding-left: 21px;
+    }
+
+  }
+}
