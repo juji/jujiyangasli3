@@ -5,6 +5,7 @@ export default function Offline () {
       <div className="offline page" style={{maxWidth: '100%'}}>
         <br />
         <p>You are offline :[</p>
+        <br />
         <div style={{maxWidth: '100%'}}>
           <img src={image} alt="offline" style={{maxWidth: '100%'}} /></div>
         <br />
