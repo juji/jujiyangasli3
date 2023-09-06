@@ -72,7 +72,7 @@ export default function Pendulum(){
     const windowInnerWidth = haveWindow && window.innerWidth
     const width = useMemo(() => {
 
-        return haveWindow && windowInnerWidth ? Math.min(
+        return windowInnerWidth ? Math.min(
             windowInnerWidth,
             Number(
                 getComputedStyle(
@@ -81,7 +81,7 @@ export default function Pendulum(){
             )
         ) : null
 
-    },[ haveWindow, windowInnerWidth ])
+    },[ windowInnerWidth ])
 
     // console.log(
     //     'canvas width',
