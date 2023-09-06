@@ -50,8 +50,8 @@ export default function Works({ showAll }:{ showAll?: boolean }){
                     href={showAll || showZombies ? `/works` : `/works/showzombies`} 
                     toggled={showAll|| showZombies || false} 
                     label={showAll || showZombies ? 
-                        <>Zombies&nbsp;Shown</> :
-                        <>Show&nbsp;Zombies</>} />
+                        <>All&nbsp;Shown</> :
+                        <>Inactive&nbsp;Projects</>} />
             </div>
         </div>
 
