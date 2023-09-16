@@ -8,7 +8,7 @@ export default function Tech(){
     return <div className={`${style.tech} page`} id="tech">
 
         <h1 className={`${style.h1}`}>Technologies</h1>
-        <p className={`${style.par}`}>Techs i&apos;m familiar with</p>
+        <p className={`${style.par}`}>Techs i&apos;m comfortable with</p>
 
         { data.map((group, i) => {
             
