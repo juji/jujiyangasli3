@@ -2,13 +2,13 @@
 
 import styles from './header.module.scss'
 import Link from 'next/link'
-import { Source_Serif_Pro } from 'next/font/google'
+import { Source_Serif_4 } from 'next/font/google'
 import { usePathname } from 'next/navigation';
 import Menu from '@/components/layout/Menu'
 import MobileMenu from '@/components/layout/Menu/mobile'
 // import version from '@/lib/version'
 
-const sourceSerif = Source_Serif_Pro({
+const sourceSerif = Source_Serif_4({
     subsets: ['latin'],
     weight: '400'
 })
