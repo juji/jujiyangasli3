@@ -6,7 +6,7 @@ import type { ReactNode } from 'react'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Pendulum from '@/components/layout/Pendulum'
-import Script from 'next/script'
+// import Script from 'next/script'
 import { Metadata } from 'next';
 import openGraph from '@/components/utils/tags/openGraph'
 import twitter from '@/components/utils/tags/twitter'
