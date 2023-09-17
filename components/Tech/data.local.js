@@ -1,20 +1,20 @@
 const tech = [
   [
     {
-      id: 'bun',
-      width: 80,
-      height: 70,
-      title: 'Bun',
-      image: '/images/tech/bun.svg',
-      url: 'https://bun.sh/'
-    },
-    {
       id: 'nodejs',
       width: 2400,
       height: 2643,
       title: 'NodeJs',
       image: '/images/tech/nodejs.webp',
       url: 'https://nodejs.org'
+    },
+    {
+      id: 'bun',
+      width: 80,
+      height: 70,
+      title: 'Bun',
+      image: '/images/tech/bun.svg',
+      url: 'https://bun.sh/'
     },
     {
       id: 'firebase',

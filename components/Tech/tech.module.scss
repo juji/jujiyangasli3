@@ -61,8 +61,12 @@
             width: 50%;
         }
 
-        #firebase{
+        #bun{
             width: 50%;
+        }
+
+        #firebase{
+            // width: 50%;
             img{
                 height: 120px
             }
@@ -89,6 +93,16 @@
             img{
                 width: 180px;
             }
+        }
+
+        #react{
+            height: 170px;
+            img{
+                display: block;
+                // height: 300px;
+            }
+            // width: 200px;
+            // height: auto;
         }
 
         #electron{
@@ -186,6 +200,11 @@
                 width: 74px;
             }
 
+            #bun{
+                width: 74px;
+                margin: 0px 21px;
+            }
+
             #docker{
                 width: 96px;
                 height: 89px;
@@ -206,7 +225,11 @@
     
             #express{
                 width: 211px;
-                margin-right: 34px;
+                // margin-right: 34px;
+            }
+
+            #react{
+                height: 89px;
             }
     
             #next{
