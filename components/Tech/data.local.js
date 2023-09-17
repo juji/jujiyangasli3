@@ -51,6 +51,14 @@ const tech = [
       url: 'https://expressjs.com/'
     },
     {
+      id: 'react',
+      width: 500,
+      height: 500,
+      title: 'React',
+      image: '/images/tech/react.webp',
+      url: 'https://react.dev/'
+    },
+    {
       id: 'next',
       width: 380,
       height: 181,
