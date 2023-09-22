@@ -92,7 +92,7 @@ export default function WorkDetail({ children, btz }: WorkDetailProps){
                 </div>
 
             </div>
-            
+             
             { zoomer ? <Zoomer 
                 {...zoomer}
                 onClose={closeZoomer} /> : null}
