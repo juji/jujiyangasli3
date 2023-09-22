@@ -1,3 +1,7 @@
+:root{
+  view-transition-name: none;
+}
+
 @media screen and (min-width: 320px) {
   :root{
     --mainPadding: 34px !important;
@@ -160,3 +164,4 @@ blockquote::before{
   margin: 0 auto;
   max-width: 1400px;
 } */
+

@@ -37,8 +37,32 @@ export default function WorkDetail({ children, btz }: WorkDetailProps){
     },[ data, pathname ])
 
     const [ zoomer, setZoomer ] = useState<ZoomerProps | null>(null)
-    const openZoomer = (obj: ZoomerProps) => () => setZoomer(obj)
-    const closeZoomer = () => setZoomer(null)
+    const onCloseZoomer = useRef<Function|null>(null)    
+    const openZoomer = (obj: ZoomerProps) => (onClose:Function|null) => {
+        onCloseZoomer.current = onClose
+        setZoomer(obj)
+    }
+    const closeZoomer = () => {
+        onCloseZoomer.current && onCloseZoomer.current()
+        onCloseZoomer.current = null
+        setZoomer(null)
+    }
+
+    // const openZoomerTransition = (obj: ZoomerProps) => (onClose:Function|null) => {
+    //     // @ts-ignore
+    //     if (!document?.startViewTransition)
+    //         openZoomer(obj)(onClose);
+    //     else // @ts-ignore
+    //         document.startViewTransition(() => openZoomer(obj)(onClose));
+    // }
+
+    // const closeZoomerTransition = () => {
+    //     // @ts-ignore
+    //     if (!document?.startViewTransition)
+    //         closeZoomer()
+    //     else // @ts-ignore
+    //         document.startViewTransition(() => closeZoomer())
+    // }
 
     return project ? <>
         <div className={`${styles.workDetail} page`}>

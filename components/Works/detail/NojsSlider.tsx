@@ -20,7 +20,7 @@ interface SlideTime {
 
 export default function NojsSlider({ slides, openZoomer }:{ 
   slides: Slide[]
-  openZoomer: (obj: { src: string, alt: string, width: number, height: number }) => () => void
+  openZoomer: (obj: { src: string, alt: string, width: number, height: number }) => (onClose:Function|null) => void
 }) {
 
   const slideShow = useRef<SlideTime|null>(null)
@@ -40,7 +40,7 @@ export default function NojsSlider({ slides, openZoomer }:{
     }
   }
 
-  const cancelTimer = () => {
+  const cancelTimer = (startAgain?: boolean) => {
 
     if(
       !slideShow.current ||
@@ -51,7 +51,12 @@ export default function NojsSlider({ slides, openZoomer }:{
     clearTimeout(slideShow.current.timer)
     
     // add delay
-    setSlide(slideShow.current.current, 10000)
+    if(startAgain) setSlide(slideShow.current.current, 10000)
+  }
+
+  const setTimer = () => {
+    if(typeof slideShow.current?.current === 'number')
+      setSlide(slideShow.current.current,500)
   }
 
   useEffect(() => {
@@ -68,12 +73,15 @@ export default function NojsSlider({ slides, openZoomer }:{
     width: number, height: number 
   }) => (e:any) => {
     e.preventDefault()
-    openZoomer(props)()
+    cancelTimer();
+    openZoomer(props)(() => {
+      setTimer()
+    })
   }
 
   return <div className={styles.sliderContainer}>
     <div className={`${styles.slider} ${slides.length === 1 ? styles.slideZero : ''}`}>
-      <div className={`${styles.slides}`} onTouchStart={cancelTimer}>
+      <div className={`${styles.slides}`} onTouchStart={() => cancelTimer(true)}>
         {slides.map((v,i) => <div key={`slide${i}`} 
           id={`slide${i}`} 
           className={`${styles.slide}`}>
@@ -91,10 +99,10 @@ export default function NojsSlider({ slides, openZoomer }:{
               />
             </a>
           <a className={`${styles.slidePrev} ${styles.arrow} noline`}
-            onClick={cancelTimer}
+            onClick={() => cancelTimer(true)}
             href={`#slide${i === 0?slides.length-1:i-1}`} title="Previous"></a>
           <a className={`${styles.slideNext} ${styles.arrow} noline`} 
-            onClick={cancelTimer}
+            onClick={() => cancelTimer(true)}
             href={`#slide${(i+1) === slides.length?0:i+1}`} title="Next"></a>
         </div>)}
       </div>

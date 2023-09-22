@@ -1,7 +1,7 @@
-// @keyframes fadeIn {
-//   0% {  opacity: 0}
-//   100% { opacity: 1}
-// }
+@keyframes fadeIn {
+  0% {  opacity: 0}
+  100% { opacity: 1}
+}
 
 .sliderContainer{
 
@@ -62,8 +62,9 @@
           }
 
           img{
-            // animation: fadeIn 1s linear;
-            // width: 100%;
+
+            animation: fadeIn 1s linear;
+
             height: 100%;
             object-fit: contain;
             width: 100%;
