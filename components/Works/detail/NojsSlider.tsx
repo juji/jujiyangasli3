@@ -3,9 +3,9 @@ import styles from './nojslider.module.scss'
 import Loader from '@/components/utils/Loader'
 import Image from 'next/image'
 
-interface Slide{
-  url: string,
-  title: string,
+type Slide = {
+  url: string
+  title: string
   thumbnail: string
   dimension: {
     thumb: { width: number, height: number }
@@ -13,7 +13,7 @@ interface Slide{
   }
 }
 
-interface SlideTime {
+type SlideTime = {
   timer: ReturnType<typeof setTimeout>
   current: number
 }

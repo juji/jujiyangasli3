@@ -3,7 +3,6 @@
 import styled from './menu.module.scss'
 import Link from 'next/link'
 import { TiHome } from "react-icons/ti"
-import isNotHome from '@/components/utils/isNotHome.interface'
 import { usePathname } from 'next/navigation'
 // import version from '@/lib/version'
 

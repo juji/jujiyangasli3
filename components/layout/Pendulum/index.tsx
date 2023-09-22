@@ -5,9 +5,9 @@ import styles from './pendulum.module.scss'
 import PendulumFn from './doublePendulum'
 import { usePathname } from 'next/navigation'
 
-interface PendulumImage {
-    src: string, 
-    width: number, 
+type PendulumImage = {
+    src: string
+    width: number
     height: number
 }
 

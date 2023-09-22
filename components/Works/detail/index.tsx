@@ -12,12 +12,12 @@ import NojsSlider from './NojsSlider'
 
 const Zoomer = dynamic(() => import('./Zoomer'), { ssr: false })
 
-interface WorkDetailProps{
+type WorkDetailProps = {
     children: ReactNode
     btz?: boolean
 }
 
-interface ZoomerProps {
+type ZoomerProps = {
     src: string
     alt: string
     width: number

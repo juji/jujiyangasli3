@@ -1,13 +1,13 @@
 import style from './techcell.module.scss'
 import Image from 'next/image';
 
-interface TechProps {
-    id: string,
-    title: string,
-    image: string,
-    url: string,
-    width: number,
-    height: number,
+type TechProps = {
+    id: string
+    title: string
+    image: string
+    url: string
+    width: number
+    height: number
     className?: string
 }
 

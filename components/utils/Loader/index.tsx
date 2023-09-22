@@ -1,8 +1,8 @@
 
 import style from './loader.module.scss'
 
-interface LoaderProps {
-    className?: string,
+type LoaderProps = {
+    className?: string
     id?: string
 }
 

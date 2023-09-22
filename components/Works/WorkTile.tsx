@@ -5,7 +5,7 @@ import Link from 'next/link'
 // import version from '@/lib/version'
 import Image from 'next/image'
 
-interface WorkImage {
+type WorkImage = {
     url: string
     title: string
     thumbnail: string
@@ -15,7 +15,7 @@ interface WorkImage {
     }
 }
 
-interface WorkTileInterface {
+type WorkTileType = {
    id: string
    year: string
    workId: string
@@ -27,7 +27,7 @@ interface WorkTileInterface {
    backToZombies?: boolean
 }
 
-export default function WorkTile(props: WorkTileInterface){
+export default function WorkTile(props: WorkTileType){
 
     const { id, workId, images, title, className, lazyLoad, backToZombies } = props
     

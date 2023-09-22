@@ -13,7 +13,7 @@ import {
 
 
 
-interface ZoomerProps {
+type ZoomerProps = {
     src: string
     onClose: () => void
     alt: string
@@ -21,7 +21,7 @@ interface ZoomerProps {
     height: number
 }
 
-interface ControlProps {
+type ControlProps = {
     zoomIn: () => void | any,
     zoomOut: () => void | any,
     resetTransform: () => void | any,

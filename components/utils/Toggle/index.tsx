@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import styles from './toggle.module.scss'
 import Link from 'next/link'
 
-import type { MouseEvent } from 'react'
+// import type { MouseEvent } from 'react'
 
 export default function Toggle({ label, onClick, toggled, href }:{
   label: ReactNode

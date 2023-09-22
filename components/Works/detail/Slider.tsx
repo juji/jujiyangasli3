@@ -4,14 +4,14 @@ import "keen-slider/keen-slider.min.css"
 import style from './slider.module.scss'
 import Loader from "@/components/utils/Loader"
 
-interface Slide{
-    url: string,
-    title: string,
+type Slide = {
+    url: string
+    title: string
     thumbnail: string
 }
 
-interface SlideImages{
-    slides: Slide[],
+type SlideImages = {
+    slides: Slide[]
     openZoomer: (obj: { src: string, alt: string }) => () => void
 }
 
