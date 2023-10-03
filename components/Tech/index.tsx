@@ -4,6 +4,8 @@ import data from './data.local.js'
 import TechCell from './TechCell'
 
 export default function Tech(){
+
+    let no = 0;
     
     return <div className={`${style.tech} page`} id="tech">
 
@@ -12,11 +14,13 @@ export default function Tech(){
 
         { data.map((group, i) => {
             
-            let no = 0
+            
             return <div key={`techRow${i}`} className={style.techRow} id={style[`techRow${i}`]}>
 
                 {group.map((tech, idx) => {
-                    
+
+                    // console.log(no)
+                    // count the number of tech for tech.module.scss
 
                     return <TechCell {...tech} 
                         key={`techRow${i}.${idx}`}
