@@ -3,8 +3,9 @@ import style from './tech.module.scss'
 import data from './data.local.js'
 import TechCell from './TechCell'
 
-export default function Tech(){
 
+export default function Tech(){
+    
     let no = 0;
     
     return <div className={`${style.tech} page`} id="tech">

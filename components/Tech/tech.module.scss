@@ -42,7 +42,7 @@
             }
         }
 
-
+        // checkout num on index.tsx
         @for $i from 0 through 27 {
             .techNo#{$i} {
                 animation-delay: (500ms + (50ms * $i));
