@@ -6,7 +6,7 @@ import TechCell from './TechCell'
 
 export default function Tech(){
     
-    let no = 0;
+    let num = 0;
     
     return <div className={`${style.tech} page`} id="tech">
 
@@ -20,13 +20,13 @@ export default function Tech(){
 
                 {group.map((tech, idx) => {
 
-                    // console.log(no)
+                    // console.log(num)
                     // count the number of tech for tech.module.scss
 
                     return <TechCell {...tech} 
                         key={`techRow${i}.${idx}`}
                         id={style[tech.id]}
-                        className={`${style.techItem} ${style[`techNo${no++}`]}`} />
+                        className={`${style.techItem} ${style[`techNo${num++}`]}`} />
 
                 })}
 
